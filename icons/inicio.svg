@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <!-- Diseño reutilizable de la planta -->
+    <g id="plant">
+      <!-- Montículo de tierra -->
+      <path d="M -35 0 Q 0 -35 35 0" fill="#B37E55" stroke="#000000" stroke-width="14" stroke-linejoin="round"/>
+      <!-- Tallo -->
+      <path d="M 0 0 L 0 -60" stroke="#000000" stroke-width="14" stroke-linecap="round"/>
+      <!-- Hojas -->
+      <path d="M 0 -20 Q -25 -20 -25 -45 Q 0 -45 0 -20" fill="#8BC34A" stroke="#000000" stroke-width="12" stroke-linejoin="round"/>
+      <path d="M 0 -40 Q 25 -40 25 -65 Q 0 -65 0 -40" fill="#8BC34A" stroke="#000000" stroke-width="12" stroke-linejoin="round"/>
+    </g>
+  </defs>
+
+  <!-- Fondo de Cristal del Invernadero -->
+  <path d="M 48 240 L 256 48 L 464 240 L 464 464 L 48 464 Z" fill="#D5F0FA" />
+  
+  <!-- Fondo de la Puerta Central -->
+  <rect x="208" y="272" width="96" height="192" fill="#FFFFFF" />
+
+  <!-- Plantas (posicionadas en cada sección) -->
+  <use href="#plant" x="88" y="464" />
+  <use href="#plant" x="168" y="464" />
+  <use href="#plant" x="344" y="464" />
+  <use href="#plant" x="424" y="464" />
+
+  <!-- Detalles de Reflejo en el Cristal -->
+  <line x1="72" y1="300" x2="112" y2="260" stroke="#FFFFFF" stroke-width="12" stroke-linecap="round" opacity="0.8"/>
+  <line x1="392" y1="340" x2="432" y2="300" stroke="#FFFFFF" stroke-width="12" stroke-linecap="round" opacity="0.8"/>
+  <line x1="120" y1="180" x2="180" y2="120" stroke="#FFFFFF" stroke-width="12" stroke-linecap="round" opacity="0.8"/>
+  <line x1="320" y1="180" x2="360" y2="150" stroke="#FFFFFF" stroke-width="12" stroke-linecap="round" opacity="0.8"/>
+
+  <!-- ================= LÍNEAS DE ESTRUCTURA ================= -->
+  
+  <!-- Contorno Principal del Invernadero -->
+  <path d="M 48 240 L 256 48 L 464 240 L 464 464 L 48 464 Z" fill="none" stroke="#000000" stroke-width="16" stroke-linejoin="round" stroke-linecap="round"/>
+  
+  <!-- Viga Horizontal (Separación Techo / Pared) -->
+  <line x1="48" y1="240" x2="464" y2="240" stroke="#000000" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+  
+  <!-- Viga Vertical Central del Techo -->
+  <line x1="256" y1="48" x2="256" y2="240" stroke="#000000" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+  
+  <!-- Pilares Verticales (Paredes de cristal) -->
+  <line x1="128" y1="166" x2="128" y2="464" stroke="#000000" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+  <line x1="384" y1="166" x2="384" y2="464" stroke="#000000" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Marco de la Puerta -->
+  <rect x="208" y="272" width="96" height="192" fill="none" stroke="#000000" stroke-width="16" stroke-linejoin="round" stroke-linecap="round"/>
+  
+  <!-- Pomo de la Puerta -->
+  <circle cx="280" cy="368" r="8" fill="#000000" />
+  
+  <!-- Suelo / Base Inferior (Se dibuja al final para superponerse limpiamente) -->
+  <line x1="24" y1="464" x2="488" y2="464" stroke="#000000" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+  
+</svg>

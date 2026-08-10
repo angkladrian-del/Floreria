@@ -1,0 +1,121 @@
+<!DOCTYPE html> <!-- Declaración del tipo de documento HTML5. -->
+<html lang="es-mx"> <!-- Idioma del documento (Español México). -->
+
+<head> <!-- Encabezado de metadatos. -->
+    <meta charset="UTF-8"> <!-- Codificación UTF-8. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Escala responsiva para pantallas móviles. -->
+    <title>Agregar Inventario - Florería Enterprise</title> <!-- Título del documento. -->
+    <link rel="stylesheet" href="../css/styles.css"> <!-- Enlace a estilos generales. -->
+    <link rel="stylesheet" href="../css/forms.css"> <!-- Enlace a estilos de formularios. -->
+</head> <!-- Fin del encabezado de metadatos. -->
+
+<body> <!-- Cuerpo de la página web. -->
+
+    <!-- Cabecera Global -->
+    <header class="cabecera-global"> <!-- Cabecera global del sistema. -->
+        <div class="logo-container"> <!-- Contenedor de marca y logotipo. -->
+            <h1><a href="../index.html">Florería Enterprise</a></h1> <!-- Enlace al inicio del sitio. -->
+        </div> <!-- Fin de marca. -->
+        <div class="acciones-derecha"> <!-- Contenedor de botones superiores. -->
+            <a href="config.html" class="btn-secundario">⚙️ Configuración</a> <!-- Enlace a Configuración. -->
+            <a href="../index.html" class="btn-primario">🏠 Inicio</a> <!-- Enlace a Inicio. -->
+        </div> <!-- Fin de botones superiores. -->
+    </header> <!-- Fin de la cabecera. -->
+
+    <!-- Layout Dashboard Pantalla Completa -->
+    <div class="layout-inferior"> <!-- Layout del panel flexible. -->
+        <!-- Sidebar Fija Limpia -->
+        <aside class="sidebar-fija"> <!-- Barra lateral navegable. -->
+            <nav class="navegacion"> <!-- Navegación principal. -->
+                <ul> <!-- Lista de opciones navegables. -->
+                    <li><a href="../index.html">🏠 Inicio</a></li> <!-- Enlace a Inicio. -->
+                    <li><a href="#">💐 Arreglos Florales</a></li> <!-- Enlace a Arreglos Florales. -->
+                    <li><a href="../frente_class/flores_indi.html">🌹 Flores Individuales</a></li> <!-- Enlace a Flores Individuales. -->
+                    <li><a href="../frente_class/plantas_macetas.html">🪴 Plantas y Macetas</a></li> <!-- Enlace a Plantas y Macetas. -->
+                    <li><a href="config.html" class="activo">⚙️ Configuración</a></li> <!-- Enlace a Configuración (Activo). -->
+                </ul> <!-- Fin de lista. -->
+            </nav> <!-- Fin de navegación. -->
+        </aside> <!-- Fin de barra lateral. -->
+
+        <!-- Área de Trabajo Principal -->
+        <main class="area-trabajo"> <!-- Área principal de contenido. -->
+            <div class="contenido"> <!-- Contenedor de trabajo. -->
+
+                <div class="dashboard-header"> <!-- Encabezado del dashboard. -->
+                    <h2>Registro de Nuevo Producto al Inventario</h2> <!-- Título principal del formulario. -->
+                    <p>Complete el formulario multi-columna para registrar flores, arreglos o plantas en el catálogo.</p> <!-- Instrucción. -->
+                </div> <!-- Fin de encabezado. -->
+
+                <div class="panel-box" style="max-width: 900px;"> <!-- Caja de panel para formulario. -->
+                    <div class="panel-title"> <!-- Título del panel. -->
+                        <span>📝 Formulario de Registro</span> <!-- Nombre del formulario. -->
+                        <small class="nota">* Campos obligatorios</small> <!-- Nota de obligatoriedad. -->
+                    </div> <!-- Fin del título del panel. -->
+
+                    <form action="#" method="POST"> <!-- Formulario de envío con método POST. -->
+                        <fieldset> <!-- Agrupador de clasificación del producto. -->
+                            <legend>Clasificación del Producto</legend> <!-- Leyenda del grupo. -->
+                            <div class="form-grid-2col"> <!-- Grilla de 2 columnas. -->
+                                <div class="input-group"> <!-- Grupo de entrada para Nombre. -->
+                                    <label for="add-nombre">Nombre de la Flor / Producto *:</label> <!-- Etiqueta de Nombre. -->
+                                    <input type="text" id="add-nombre" placeholder="Ej: Orquídea Phalaenopsis" required> <!-- Campo de Nombre obligatorio. -->
+                                </div> <!-- Fin de grupo Nombre. -->
+                                <div class="input-group"> <!-- Grupo de entrada para Categoría. -->
+                                    <label for="add-categoria">Categoría *:</label> <!-- Etiqueta de Categoría. -->
+                                    <select id="add-categoria" required> <!-- Desplegable de Categoría. -->
+                                        <option value="">-- Seleccionar Categoría --</option> <!-- Opción predeterminada. -->
+                                        <option value="flores">Flores Individuales</option> <!-- Opción Flores. -->
+                                        <option value="arreglos">Arreglos Florales</option> <!-- Opción Arreglos. -->
+                                        <option value="plantas">Plantas y Macetas</option> <!-- Opción Plantas. -->
+                                    </select> <!-- Fin de desplegable. -->
+                                </div> <!-- Fin de grupo Categoría. -->
+                            </div> <!-- Fin de grilla 2 columnas. -->
+                            <div class="form-grid-2col"> <!-- Grilla de 2 columnas secundaria. -->
+                                <div class="input-group"> <!-- Grupo de entrada para Especie. -->
+                                    <label for="add-especie">Especie / Variedad *:</label> <!-- Etiqueta de Especie. -->
+                                    <input type="text" id="add-especie" placeholder="Ej: Rosa Híbrida de Té" required> <!-- Campo de Especie. -->
+                                </div> <!-- Fin de grupo Especie. -->
+                                <div class="input-group"> <!-- Grupo de entrada para Color. -->
+                                    <label for="add-color">Color Predominante *:</label> <!-- Etiqueta de Color. -->
+                                    <input type="text" id="add-color" placeholder="Ej: Blanca Nieve" required> <!-- Campo de Color. -->
+                                </div> <!-- Fin de grupo Color. -->
+                            </div> <!-- Fin de grilla secundaria. -->
+                        </fieldset> <!-- Fin del grupo de clasificación. -->
+
+                        <fieldset> <!-- Agrupador de inventario y precios. -->
+                            <legend>Inventario y Precios</legend> <!-- Leyenda del grupo. -->
+                            <div class="form-grid-3col"> <!-- Grilla de 3 columnas. -->
+                                <div class="input-group"> <!-- Grupo de entrada para Stock. -->
+                                    <label for="add-cantidad">Stock Inicial *:</label> <!-- Etiqueta de Stock. -->
+                                    <input type="number" id="add-cantidad" min="1" placeholder="Ej: 10" required> <!-- Campo de Stock numérico. -->
+                                </div> <!-- Fin de grupo Stock. -->
+                                <div class="input-group"> <!-- Grupo de entrada para Precio. -->
+                                    <label for="add-precio">Precio Unitario ($ MXN) *:</label> <!-- Etiqueta de Precio. -->
+                                    <input type="number" id="add-precio" step="0.50" min="0" placeholder="Ej: 120.00" required> <!-- Campo de Precio con decimales. -->
+                                </div> <!-- Fin de grupo Precio. -->
+                                <div class="input-group"> <!-- Grupo de entrada para Tamaño. -->
+                                    <label for="add-tamano">Tamaño / Talle *:</label> <!-- Etiqueta de Tamaño. -->
+                                    <input type="text" id="add-tamano" placeholder="Ej: Mediana (40cm)" required> <!-- Campo de Tamaño. -->
+                                </div> <!-- Fin de grupo Tamaño. -->
+                            </div> <!-- Fin de grilla 3 columnas. -->
+                        </fieldset> <!-- Fin del grupo de inventario. -->
+
+                        <div class="form-actions"> <!-- Contenedor de botones de acción. -->
+                            <button type="submit" class="btn-primario" style="flex: 2;">➕ Registrar en Inventario</button> <!-- Botón de envío. -->
+                            <button type="reset" class="btn-secundario" style="flex: 1;">Limpiar Formulario</button> <!-- Botón de limpieza. -->
+                        </div> <!-- Fin de acciones. -->
+                    </form> <!-- Fin del formulario. -->
+                </div> <!-- Fin de caja de panel. -->
+
+            </div> <!-- Fin de contenido. -->
+        </main> <!-- Fin de área principal. -->
+    </div> <!-- Fin del layout inferior. -->
+
+    <!-- Pie de página Global -->
+    <footer> <!-- Pie de página global. -->
+        <p>&copy; 2026 Florería. Todos los derechos reservados.</p> <!-- Mensaje de derechos de autor. -->
+    </footer> <!-- Fin del pie de página. -->
+
+</body> <!-- Fin del cuerpo del documento. -->
+
+</html> <!-- Fin del documento. -->

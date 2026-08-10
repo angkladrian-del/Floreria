@@ -1,0 +1,373 @@
+:root {
+    /* --- Colores Empresariales: Tema Claro --- */
+    --fondo-principal: #F1F5F9; /* Fondo gris claro suave para la app. */
+    --fondo-sidebar: #FFFFFF; /* Fondo blanco para tarjetas y barra lateral. */
+    --color-texto: #0F172A; /* Color de texto principal en tono pizarra oscuro. */
+    --color-texto-suave: #64748B; /* Color de texto secundario atenuado. */
+    --color-borde: #E2E8F0; /* Color de bordes y divisores finos. */
+    --fondo-hover: #F8FAFC; /* Color de fondo al pasar el cursor sobre elementos. */
+
+    --accent: #C74062; /* Color de acento magenta/rosa elegante para botones principales. */
+    --accent-dark: #9F2D49; /* Tono de acento oscuro para estado hover. */
+    --color-texto-boton: #FFFFFF; /* Color blanco de texto en botones primarios. */
+    --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03); /* Sombra suave. */
+
+    /* Estados de Inventario */
+    --success-bg: #DCFCE7; /* Fondo verde para estado disponible. */
+    --success-text: #15803D; /* Texto verde oscuro para disponible. */
+    --warning-bg: #FEF3C7; /* Fondo amarillo para estado stock bajo. */
+    --warning-text: #B45309; /* Texto amarillo oscuro para stock bajo. */
+    --danger-bg: #FEE2E2; /* Fondo rojo para estado agotado o eliminar. */
+    --danger-text: #B91C1C; /* Texto rojo para estado agotado. */
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        /* --- Colores Empresariales: Tema Oscuro --- */
+        --fondo-principal: #0F172A; /* Fondo azul noche oscuro. */
+        --fondo-sidebar: #1E293B; /* Fondo de paneles y tarjetas en modo oscuro. */
+        --color-texto: #F8FAFC; /* Texto blanco brillante. */
+        --color-texto-suave: #94A3B8; /* Texto secundario gris claro. */
+        --color-borde: #334155; /* Bordes en modo oscuro. */
+        --fondo-hover: #334155; /* Fondo de selección en modo oscuro. */
+
+        --accent: #F43F5E; /* Acento rosa neón brillante en modo oscuro. */
+        --accent-dark: #E11D48; /* Acento rosa neón oscuro. */
+        --color-texto-boton: #FFFFFF; /* Texto blanco para botones. */
+        --shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3); /* Sombra acentuada en modo oscuro. */
+
+        /* Estados Oscuro */
+        --success-bg: rgba(22, 101, 52, 0.3); /* Fondo verde translúcido. */
+        --success-text: #4ADE80; /* Texto verde neón. */
+        --warning-bg: rgba(146, 64, 14, 0.3); /* Fondo amarillo translúcido. */
+        --warning-text: #FBBF24; /* Texto amarillo neón. */
+        --danger-bg: rgba(153, 27, 27, 0.3); /* Fondo rojo translúcido. */
+        --danger-text: #F87171; /* Texto rojo neón. */
+    }
+}
+
+/* Reset y estilos globales */
+* {
+    margin: 0; /* Sin margen por defecto. */
+    padding: 0; /* Sin relleno por defecto. */
+    box-sizing: border-box; /* Modelo de caja basado en borde. */
+    font-family: 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, Roboto, sans-serif; /* Tipografía principal. */
+}
+
+body {
+    background-color: var(--fondo-principal); /* Aplicación del fondo global. */
+    color: var(--color-texto); /* Color de texto global. */
+    display: flex; /* Contenedor flex en columna. */
+    flex-direction: column; /* Alineación vertical. */
+    min-height: 100vh; /* Altura mínima de la pantalla completa. */
+}
+
+/* Cabecera global estilo Dashboard Empresarial */
+.cabecera-global {
+    display: flex; /* Flexbox horizontal. */
+    justify-content: space-between; /* Distribución a extremos. */
+    align-items: center; /* Centrado vertical. */
+    padding: 0 30px; /* Relleno lateral. */
+    height: 64px; /* Altura fija de 64px. */
+    background-color: var(--fondo-sidebar); /* Fondo de la barra superior. */
+    border-bottom: 1px solid var(--color-borde); /* Borde inferior. */
+    box-shadow: var(--shadow); /* Sombra proyectada. */
+    z-index: 10; /* Superposición frontal. */
+}
+
+.logo-container {
+    display: flex; /* Flexbox para logotipo. */
+    align-items: center; /* Centrado vertical. */
+    gap: 12px; /* Separación de elementos. */
+}
+
+.logo-container h1 a {
+    color: var(--accent); /* Color de texto acentuado para la marca. */
+    text-decoration: none; /* Sin subrayado. */
+    font-size: 22px; /* Tamaño de fuente. */
+    font-weight: 700; /* Grosor en negrita. */
+    letter-spacing: -0.5px; /* Espaciado entre letras. */
+}
+
+.acciones-derecha {
+    display: flex; /* Flexbox horizontal de acciones. */
+    gap: 12px; /* Espaciado entre botones. */
+    align-items: center; /* Centrado vertical. */
+}
+
+/* Layout Dashboard Pantalla Completa */
+.layout-inferior {
+    display: flex; /* Flexbox para sidebar y área principal. */
+    flex: 1; /* Ocupa el espacio vertical disponible. */
+    overflow: hidden; /* Oculta desbordamientos fuera de área. */
+}
+
+/* Sidebar Navegación Fija */
+.sidebar-fija {
+    width: 240px; /* Ancho fijo de 240px. */
+    flex-shrink: 0; /* Impide que la barra se reduzca. */
+    background-color: var(--fondo-sidebar); /* Fondo de la barra lateral. */
+    border-right: 1px solid var(--color-borde); /* Borde derecho delimitador. */
+    overflow-y: auto; /* Scroll vertical automático si es necesario. */
+}
+
+.navegacion {
+    padding: 20px 0; /* Relleno vertical del menú. */
+}
+
+.navegacion ul {
+    list-style: none; /* Quita las viñetas de la lista. */
+}
+
+.navegacion ul li a {
+    display: flex; /* Flexbox para ícono y texto. */
+    align-items: center; /* Centrado vertical. */
+    gap: 12px; /* Espacio entre ícono y texto. */
+    padding: 12px 24px; /* Relleno del enlace. */
+    color: var(--color-texto-suave); /* Color de texto atenuado. */
+    text-decoration: none; /* Sin subrayado. */
+    font-size: 14px; /* Tamaño de fuente. */
+    font-weight: 500; /* Grosor de fuente medio. */
+    transition: all 0.2s ease; /* Transición suave de hover. */
+}
+
+.navegacion ul li a:hover {
+    background-color: var(--fondo-hover); /* Fondo al pasar puntero. */
+    color: var(--color-texto); /* Color de texto activo en hover. */
+}
+
+.navegacion ul li a.activo {
+    background-color: var(--fondo-hover); /* Fondo del ítem activo. */
+    color: var(--accent); /* Texto en color de acento. */
+    font-weight: 600; /* Texto en negrita. */
+    border-left: 4px solid var(--accent); /* Borde lateral izquierdo acentuado. */
+}
+
+/* Área de Trabajo Principal - 100% de Ancho Disponible */
+.area-trabajo {
+    flex: 1; /* Ocupa todo el espacio horizontal restante. */
+    overflow-y: auto; /* Scroll vertical en el contenido principal. */
+    padding: 25px 30px; /* Relleno interno. */
+}
+
+.contenido {
+    width: 100%; /* Ancho al 100% disponible. */
+    margin: 0 auto; /* Centrado horizontal. */
+}
+
+/* Encabezado del Dashboard */
+.dashboard-header {
+    margin-bottom: 20px; /* Margen inferior. */
+}
+
+.dashboard-header h2 {
+    font-size: 24px; /* Tamaño del título del dashboard. */
+    font-weight: 700; /* Grosor negrita. */
+    color: var(--color-texto); /* Color principal. */
+}
+
+.dashboard-header p {
+    font-size: 14px; /* Tamaño del texto secundario. */
+    color: var(--color-texto-suave); /* Color secundario atenuado. */
+    margin-top: 4px; /* Margen superior. */
+}
+
+/* Tarjetas resumen (KPIs) en Cuadrícula Superior */
+.kpi-grid {
+    display: grid; /* Grid para tarjetas KPI. */
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* Columnas adaptables. */
+    gap: 20px; /* Espaciado entre tarjetas. */
+    margin-bottom: 25px; /* Margen inferior de la grilla. */
+}
+
+.kpi-card {
+    background-color: var(--fondo-sidebar); /* Fondo de tarjeta. */
+    border: 1px solid var(--color-borde); /* Borde fino. */
+    border-radius: 10px; /* Esquinas redondeadas. */
+    padding: 18px 20px; /* Relleno interno. */
+    box-shadow: var(--shadow); /* Sombra suave. */
+    display: flex; /* Flexbox horizontal. */
+    justify-content: space-between; /* Texto e ícono a extremos. */
+    align-items: center; /* Centrado vertical. */
+}
+
+.kpi-info h4 {
+    font-size: 12px; /* Tamaño del título de métrica. */
+    text-transform: uppercase; /* Mayúsculas. */
+    letter-spacing: 0.5px; /* Espaciado entre letras. */
+    color: var(--color-texto-suave); /* Texto atenuado. */
+    margin-bottom: 6px; /* Margen inferior. */
+}
+
+.kpi-value {
+    font-size: 24px; /* Tamaño del número o valor KPI. */
+    font-weight: 700; /* Negrita. */
+    color: var(--color-texto); /* Color principal. */
+}
+
+.kpi-icon {
+    font-size: 28px; /* Tamaño del ícono KPI. */
+    opacity: 0.8; /* Opacidad del ícono. */
+}
+
+/* Disposición Dividida Empresarial (Dashboard Split Grid) */
+.dashboard-split {
+    display: grid; /* Grid de 2 columnas principales. */
+    grid-template-columns: 1.1fr 0.9fr; /* Proporción 55% / 45%. */
+    gap: 25px; /* Espaciado entre columnas. */
+    align-items: start; /* Alineación al tope superior. */
+}
+
+@media (max-width: 1200px) {
+    .dashboard-split {
+        grid-template-columns: 1fr; /* Columna única en pantallas medianas/pequeñas. */
+    }
+}
+
+/* Paneles del Dashboard */
+.panel-box {
+    background-color: var(--fondo-sidebar); /* Fondo del panel. */
+    border: 1px solid var(--color-borde); /* Borde fino. */
+    border-radius: 10px; /* Esquinas redondeadas. */
+    padding: 24px; /* Relleno interno del panel. */
+    box-shadow: var(--shadow); /* Sombra del panel. */
+}
+
+.panel-title {
+    font-size: 16px; /* Tamaño del título del panel. */
+    font-weight: 700; /* Negrita. */
+    color: var(--color-texto); /* Color de texto. */
+    margin-bottom: 18px; /* Margen inferior. */
+    padding-bottom: 10px; /* Relleno inferior. */
+    border-bottom: 1px solid var(--color-borde); /* Divisor inferior. */
+    display: flex; /* Flexbox. */
+    justify-content: space-between; /* Extremos. */
+    align-items: center; /* Centrado vertical. */
+}
+
+/* Tablas Empresariales de Alta Densidad */
+.table-responsive {
+    overflow-x: auto; /* Scroll horizontal si la tabla sobrepasa. */
+    max-height: 420px; /* Altura máxima con scroll interno. */
+    overflow-y: auto; /* Scroll vertical automático. */
+    border: 1px solid var(--color-borde); /* Borde contenedor. */
+    border-radius: 8px; /* Esquinas redondeadas. */
+}
+
+table {
+    width: 100%; /* Ancho completo de la tabla. */
+    border-collapse: collapse; /* Colapsa los bordes de celdas. */
+    background-color: var(--fondo-sidebar); /* Fondo de la tabla. */
+}
+
+th {
+    position: sticky; /* Cabecera fija durante el scroll vertical. */
+    top: 0; /* Pegado al tope superior. */
+    background-color: var(--fondo-hover); /* Fondo de cabecera. */
+    color: var(--color-texto-suave); /* Color de texto de cabecera. */
+    font-size: 12px; /* Tamaño de texto de cabecera. */
+    font-weight: 700; /* Negrita. */
+    text-transform: uppercase; /* Mayúsculas. */
+    letter-spacing: 0.5px; /* Espaciado. */
+    padding: 12px 14px; /* Relleno de celdas de cabecera. */
+    text-align: left; /* Alineación a la izquierda. */
+    border-bottom: 1px solid var(--color-borde); /* Borde inferior. */
+}
+
+td {
+    padding: 12px 14px; /* Relleno de celdas de datos. */
+    font-size: 13px; /* Tamaño de letra de datos. */
+    border-bottom: 1px solid var(--color-borde); /* Borde inferior de fila. */
+    color: var(--color-texto); /* Color de texto de datos. */
+    vertical-align: middle; /* Alineación vertical al centro. */
+}
+
+tr:hover {
+    background-color: var(--fondo-hover); /* Resaltado al pasar cursor en fila. */
+    cursor: pointer; /* Puntero de mano. */
+}
+
+tr.fila-seleccionada {
+    background-color: rgba(199, 64, 98, 0.15); /* Fondo de la fila seleccionada. */
+    border-left: 3px solid var(--accent); /* Borde izquierdo acentuado. */
+}
+
+/* Badges de Estado */
+.badge-status {
+    display: inline-block; /* Elemento en línea con bloque. */
+    padding: 4px 10px; /* Relleno de la etiqueta. */
+    border-radius: 20px; /* Forma de píldora redondeada. */
+    font-size: 11px; /* Tamaño pequeño. */
+    font-weight: 700; /* Negrita. */
+}
+
+.badge-success {
+    background-color: var(--success-bg); /* Fondo verde para estado disponible. */
+    color: var(--success-text); /* Texto verde. */
+}
+
+.badge-warning {
+    background-color: var(--warning-bg); /* Fondo amarillo para estado advertencia. */
+    color: var(--warning-text); /* Texto amarillo. */
+}
+
+.badge-danger {
+    background-color: var(--danger-bg); /* Fondo rojo para estado crítico/agotado. */
+    color: var(--danger-text); /* Texto rojo. */
+}
+
+/* Botones Empresariales */
+.btn-primario,
+.btn-secundario,
+.btn-danger {
+    padding: 8px 16px; /* Relleno interno de botones. */
+    border-radius: 6px; /* Bordes suavemente redondeados. */
+    text-decoration: none; /* Sin subrayado. */
+    font-weight: 600; /* Texto seminegrita. */
+    font-size: 13px; /* Tamaño de fuente. */
+    cursor: pointer; /* Puntero interactivo. */
+    transition: all 0.2s ease; /* Transición de hover. */
+    border: none; /* Sin borde por defecto. */
+    display: inline-flex; /* Inline flex para ícono y texto. */
+    align-items: center; /* Centrado vertical. */
+    justify-content: center; /* Centrado horizontal. */
+    gap: 6px; /* Espaciado. */
+}
+
+.btn-primario {
+    background-color: var(--accent); /* Fondo acentuado primario. */
+    color: var(--color-texto-boton) !important; /* Texto blanco. */
+}
+
+.btn-primario:hover {
+    background-color: var(--accent-dark); /* Fondo acentuado oscuro al enfocar. */
+}
+
+.btn-secundario {
+    background-color: transparent; /* Fondo transparente secundario. */
+    color: var(--color-texto) !important; /* Color de texto del tema. */
+    border: 1px solid var(--color-borde); /* Borde perimetral. */
+}
+
+.btn-secundario:hover {
+    background-color: var(--fondo-hover); /* Fondo al pasar puntero. */
+}
+
+.btn-danger {
+    background-color: var(--danger-bg); /* Fondo rojo para acciones de eliminación. */
+    color: var(--danger-text); /* Texto rojo. */
+}
+
+.btn-danger:hover {
+    opacity: 0.8; /* Opacidad al pasar el cursor. */
+}
+
+/* Footer */
+footer {
+    text-align: center; /* Centrado de texto. */
+    padding: 16px; /* Relleno interno del pie de página. */
+    font-size: 12px; /* Tamaño pequeño. */
+    color: var(--color-texto-suave); /* Color de texto secundario. */
+    background-color: var(--fondo-sidebar); /* Fondo del pie de página. */
+    border-top: 1px solid var(--color-borde); /* Borde superior. */
+}

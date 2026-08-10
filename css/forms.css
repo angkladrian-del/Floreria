@@ -1,0 +1,135 @@
+/* ==========================================================================
+   ESTILOS DE FORMULARIO EMPRESARIAL - FLORERÍA
+   ========================================================================== */
+
+/* Formulario Multi-Columna (Grid Layouts) */
+.form-grid-2col {
+    display: grid; /* Layout de rejilla para 2 columnas. */
+    grid-template-columns: 1fr 1fr; /* Dos columnas de igual ancho. */
+    gap: 16px; /* Espaciado interno de 16px entre campos. */
+}
+
+.form-grid-3col {
+    display: grid; /* Layout de rejilla para 3 columnas. */
+    grid-template-columns: 1fr 1fr 1fr; /* Tres columnas de igual ancho. */
+    gap: 16px; /* Espaciado interno entre campos. */
+}
+
+@media (max-width: 768px) {
+    .form-grid-2col,
+    .form-grid-3col {
+        grid-template-columns: 1fr; /* Columna única en dispositivos móviles. */
+    }
+}
+
+/* Ocupar ambas columnas cuando sea necesario */
+.span-full {
+    grid-column: 1 / -1; /* Ocupa desde el inicio al final del grid. */
+}
+
+/* Grupos de entrada */
+.input-group {
+    margin-bottom: 14px; /* Margen inferior entre grupos de formulario. */
+}
+
+.input-group label,
+label {
+    display: block; /* Muestra la etiqueta en su propia línea. */
+    font-size: 12px; /* Tamaño pequeño de etiqueta. */
+    font-weight: 600; /* Seminegrita. */
+    margin-bottom: 6px; /* Espacio inferior respecto al input. */
+    color: var(--color-texto-suave); /* Texto atenuado. */
+    text-transform: uppercase; /* Convertir a mayúsculas. */
+    letter-spacing: 0.5px; /* Espaciado entre caracteres. */
+}
+
+/* Campos de Entrada (Input, Select, Textarea) */
+.input-group input,
+.input-group select,
+.input-group textarea,
+input[type="text"],
+input[type="number"],
+input[type="file"],
+select,
+textarea {
+    width: 100%; /* Ancho completo al 100%. */
+    padding: 9px 12px; /* Relleno interno de entrada. */
+    border-radius: 6px; /* Esquinas redondeadas. */
+    border: 1px solid var(--color-borde); /* Borde fino del sistema. */
+    background-color: var(--fondo-principal); /* Fondo del campo. */
+    color: var(--color-texto); /* Color del texto que escribe el usuario. */
+    font-size: 13px; /* Tamaño de fuente de entrada. */
+    transition: border-color 0.2s ease, box-shadow 0.2s ease; /* Transición suave de enfoque. */
+}
+
+/* Foco e interacción */
+.input-group input:focus,
+.input-group select:focus,
+.input-group textarea:focus,
+input[type="text"]:focus,
+input[type="number"]:focus,
+select:focus,
+textarea:focus {
+    outline: none; /* Remueve el contorno azul nativo. */
+    border-color: var(--accent); /* Cambia el borde al color acentuado. */
+    box-shadow: 0 0 0 3px rgba(244, 63, 94, 0.2); /* Resplandor/aura de enfoque. */
+}
+
+/* Campos deshabilitados */
+input:disabled,
+input[readonly] {
+    background-color: var(--fondo-hover); /* Fondo deshabilitado atenuado. */
+    color: var(--color-texto-suave); /* Texto deshabilitado. */
+    cursor: not-allowed; /* Puntero de prohibición/no permitido. */
+    opacity: 0.7; /* Opacidad reducida. */
+}
+
+/* Fieldset estilizados en paneles */
+fieldset {
+    border: 1px solid var(--color-borde); /* Borde perimetral fino. */
+    border-radius: 8px; /* Esquinas redondeadas. */
+    padding: 16px; /* Relleno interno del grupo. */
+    margin-bottom: 18px; /* Margen inferior. */
+    background-color: transparent; /* Fondo transparente. */
+}
+
+legend {
+    font-weight: 700; /* Texto en negrita. */
+    font-size: 12px; /* Tamaño pequeño. */
+    color: var(--accent); /* Texto en color acentuado. */
+    padding: 0 8px; /* Relleno a los lados del texto. */
+    text-transform: uppercase; /* Mayúsculas. */
+    letter-spacing: 0.5px; /* Espaciado entre letras. */
+}
+
+/* Barra de Botones del Formulario */
+.form-actions {
+    display: flex; /* Layout flexible horizontal. */
+    gap: 12px; /* Espaciado entre botones. */
+    margin-top: 20px; /* Margen superior. */
+}
+
+.btn-form {
+    padding: 10px 18px; /* Relleno del botón de formulario. */
+    border-radius: 6px; /* Esquinas redondeadas. */
+    border: none; /* Sin borde. */
+    background-color: var(--accent); /* Color de fondo acentuado. */
+    color: var(--color-texto-boton); /* Color blanco de texto. */
+    font-size: 14px; /* Tamaño de letra. */
+    font-weight: 700; /* Negrita. */
+    cursor: pointer; /* Cursor de puntero. */
+    transition: background-color 0.2s ease; /* Transición suave de hover. */
+}
+
+.btn-form:hover {
+    background-color: var(--accent-dark); /* Fondo acentuado oscuro al enfocar. */
+}
+
+/* Texto de ayuda */
+small,
+.nota {
+    font-size: 11px; /* Tamaño pequeño. */
+    color: var(--color-texto-suave); /* Color de texto secundario. */
+    margin-top: 4px; /* Margen superior. */
+    display: block; /* Muestra como bloque. */
+}

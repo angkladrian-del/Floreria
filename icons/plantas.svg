@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <defs>
+    <!-- Degradado para el cuerpo de la maceta -->
+    <linearGradient id="potGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#2a2a2a" />
+      <stop offset="100%" stop-color="#141414" />
+    </linearGradient>
+    
+    <!-- Degradado metálico para el borde (estilo latón/oro) -->
+    <linearGradient id="rimGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#d4af37" />
+      <stop offset="50%" stop-color="#f3e5ab" />
+      <stop offset="100%" stop-color="#aa8c2c" />
+    </linearGradient>
+  </defs>
+
+  <!-- Hojas de la Planta (Sansevieria) -->
+  <!-- Hoja Trasera Derecha -->
+  <path d="M 270 300 Q 300 200 320 110 Q 295 210 280 300 Z" fill="#3a5f43" />
+  <!-- Hoja Trasera Izquierda -->
+  <path d="M 220 300 Q 180 200 170 120 Q 205 200 235 300 Z" fill="#2c4c3b" />
+  <!-- Hoja Central (Más alta) -->
+  <path d="M 240 300 Q 230 150 250 50 Q 275 160 265 300 Z" fill="#4a7355" />
+  <!-- Hoja Frontal Izquierda -->
+  <path d="M 215 300 Q 160 240 140 160 Q 180 240 230 300 Z" fill="#5e8b69" />
+  <!-- Hoja Frontal Derecha -->
+  <path d="M 275 300 Q 320 250 350 170 Q 315 240 285 300 Z" fill="#426b4d" />
+  <!-- Hoja Pequeña Central -->
+  <path d="M 250 300 Q 230 220 240 160 Q 260 220 260 300 Z" fill="#75a37f" />
+
+  <!-- Cuerpo de la Maceta -->
+  <polygon points="175,320 325,320 295,440 205,440" fill="url(#potGrad)" />
+  
+  <!-- Borde de la Maceta (Detalle dorado) -->
+  <polygon points="160,290 340,290 335,320 165,320" fill="url(#rimGrad)" />
+  
+  <!-- Líneas de contorno sutiles para dar profundidad a la maceta -->
+  <line x1="205" y1="440" x2="175" y2="320" stroke="#444" stroke-width="1.5" />
+  <line x1="295" y1="440" x2="325" y2="320" stroke="#111" stroke-width="1.5" />
+</svg>

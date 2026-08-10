@@ -1,0 +1,96 @@
+<!DOCTYPE html> <!-- Declaración del tipo de documento HTML5. -->
+<html lang="es-mx"> <!-- Idioma principal de la página (Español México). -->
+
+<head> <!-- Encabezado de metadatos. -->
+    <meta charset="UTF-8"> <!-- Codificación de caracteres UTF-8. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Escala responsiva para pantallas móviles. -->
+    <title>Configuración - Florería Enterprise</title> <!-- Título mostrado en la pestaña del navegador. -->
+    <link rel="stylesheet" href="../css/styles.css"> <!-- Enlace a estilos globales. -->
+    <link rel="stylesheet" href="../css/forms.css"> <!-- Enlace a estilos de formularios. -->
+</head> <!-- Fin del encabezado de metadatos. -->
+
+<body> <!-- Cuerpo de la página. -->
+
+    <!-- Cabecera Global -->
+    <header class="cabecera-global"> <!-- Barra superior de navegación global. -->
+        <div class="logo-container"> <!-- Contenedor del nombre de la marca. -->
+            <h1><a href="../index.html">Florería Enterprise</a></h1> <!-- Nombre con enlace al inicio. -->
+        </div> <!-- Fin del contenedor de logotipo. -->
+        <div class="acciones-derecha"> <!-- Acciones superiores derechas. -->
+            <a href="config.html" class="btn-secundario">⚙️ Configuración</a> <!-- Botón de configuración. -->
+            <a href="../index.html" class="btn-primario">🏠 Inicio</a> <!-- Botón de inicio. -->
+        </div> <!-- Fin de acciones derechas. -->
+    </header> <!-- Fin de la cabecera. -->
+
+    <!-- Layout Dashboard Pantalla Completa -->
+    <div class="layout-inferior"> <!-- Layout inferior flexible. -->
+        <!-- Sidebar Fija Limpia -->
+        <aside class="sidebar-fija"> <!-- Barra lateral fija para navegación. -->
+            <nav class="navegacion"> <!-- Navegación principal. -->
+                <ul> <!-- Lista de enlaces navegables. -->
+                    <li><a href="../index.html">🏠 Inicio</a></li> <!-- Enlace a Inicio. -->
+                    <li><a href="#">💐 Arreglos Florales</a></li> <!-- Enlace a Arreglos Florales. -->
+                    <li><a href="../frente_class/flores_indi.html">🌹 Flores Individuales</a></li> <!-- Enlace a Flores Individuales. -->
+                    <li><a href="../frente_class/plantas_macetas.html">🪴 Plantas y Macetas</a></li> <!-- Enlace a Plantas y Macetas. -->
+                    <li><a href="config.html" class="activo">⚙️ Configuración</a></li> <!-- Enlace a Configuración (Activo). -->
+                </ul> <!-- Fin de lista. -->
+            </nav> <!-- Fin de navegación. -->
+        </aside> <!-- Fin de barra lateral. -->
+
+        <!-- Área de Trabajo Principal -->
+        <main class="area-trabajo"> <!-- Área principal de trabajo. -->
+            <div class="contenido"> <!-- Contenedor del módulo. -->
+
+                <div class="dashboard-header"> <!-- Encabezado del dashboard. -->
+                    <h2>Panel de Configuración y Gestión de Inventario</h2> <!-- Título del panel. -->
+                    <p>Acceda a las opciones de administración y control del catálogo de la florería.</p> <!-- Descripción. -->
+                </div> <!-- Fin de encabezado. -->
+
+                <!-- Estado de Base de Datos -->
+                <div class="kpi-grid" style="margin-bottom: 20px;"> <!-- Contenedor KPI. -->
+                    <div class="kpi-card" style="max-width: 320px;"> <!-- Tarjeta KPI de ancho compacto. -->
+                        <div class="kpi-info"> <!-- Información del estado. -->
+                            <h4>Base de Datos</h4> <!-- Título de la tarjeta. -->
+                            <div class="kpi-value" style="font-size: 16px; color: var(--danger-text);">🔴 Sin conexión</div> <!-- Valor de estado apagado. -->
+                        </div> <!-- Fin de info. -->
+                        <div class="kpi-icon">🗄️</div> <!-- Ícono de base de datos. -->
+                    </div> <!-- Fin de tarjeta KPI. -->
+                </div> <!-- Fin de contenedor KPI. -->
+
+                <!-- Tarjetas de Módulos Empresariales -->
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 20px;"> <!-- Grilla de tarjetas de módulos. -->
+                    <div class="panel-box"> <!-- Tarjeta de módulo Alta. -->
+                        <div class="panel-title"> <!-- Título del panel. -->
+                            <span>➕ Alta de Inventario</span> <!-- Nombre del módulo. -->
+                            <span class="badge-status" style="background-color: var(--fondo-hover); color: var(--color-texto-suave);">Vista Formulario</span> <!-- Distintivo de estado. -->
+                        </div> <!-- Fin del título del panel. -->
+                        <p style="color: var(--color-texto-suave); font-size: 13px; margin-bottom: 20px;"> <!-- Descripción del módulo. -->
+                            Registre nuevas flores, especies, macetas y arreglos florales especificando categoría, precio, stock inicial y tamaño. <!-- Texto explicativo. -->
+                        </p> <!-- Fin de descripción. -->
+                        <a href="Add_Inven.html" class="btn-primario" style="width: 100%;">Acceder a Alta de Inventario →</a> <!-- Botón de enlace a Alta. -->
+                    </div> <!-- Fin de tarjeta de módulo Alta. -->
+
+                    <div class="panel-box"> <!-- Tarjeta de módulo Actualización. -->
+                        <div class="panel-title"> <!-- Título del panel. -->
+                            <span>✏️ Consulta y Edición de Inventario</span> <!-- Nombre del módulo. -->
+                            <span class="badge-status" style="background-color: var(--fondo-hover); color: var(--color-texto-suave);">Vista Formulario</span> <!-- Distintivo de estado. -->
+                        </div> <!-- Fin del título del panel. -->
+                        <p style="color: var(--color-texto-suave); font-size: 13px; margin-bottom: 20px;"> <!-- Descripción del módulo. -->
+                            Dashboard de consulta para búsqueda de registros, actualización de precios, cantidades en stock y estado del producto. <!-- Texto explicativo. -->
+                        </p> <!-- Fin de descripción. -->
+                        <a href="up_inveto.html" class="btn-primario" style="width: 100%;">Acceder a Actualización →</a> <!-- Botón de enlace a Actualización. -->
+                    </div> <!-- Fin de tarjeta de módulo Actualización. -->
+                </div> <!-- Fin de grilla de módulos. -->
+
+            </div> <!-- Fin de contenido. -->
+        </main> <!-- Fin de área principal. -->
+    </div> <!-- Fin del layout inferior. -->
+
+    <!-- Pie de página Global -->
+    <footer> <!-- Pie de página. -->
+        <p>&copy; 2026 Florería. Todos los derechos reservados.</p> <!-- Derechos de autor. -->
+    </footer> <!-- Fin del pie de página. -->
+
+</body> <!-- Fin del cuerpo del documento. -->
+
+</html> <!-- Fin del documento. -->

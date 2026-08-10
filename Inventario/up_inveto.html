@@ -1,0 +1,258 @@
+<!DOCTYPE html> <!-- Declaración del tipo de documento HTML5. -->
+<html lang="es-mx"> <!-- Idioma principal del documento (Español México). -->
+
+<head> <!-- Encabezado de metadatos. -->
+    <meta charset="UTF-8"> <!-- Codificación UTF-8. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Escala responsiva para móviles. -->
+    <title>Gestión de Inventario - Florería Enterprise</title> <!-- Título de la página. -->
+    <link rel="stylesheet" href="../css/styles.css"> <!-- Enlace a la hoja de estilos principales. -->
+    <link rel="stylesheet" href="../css/forms.css"> <!-- Enlace a la hoja de estilos de formularios. -->
+</head> <!-- Fin del encabezado. -->
+
+<body> <!-- Cuerpo del documento. -->
+
+    <!-- Cabecera Global Empresarial -->
+    <header class="cabecera-global"> <!-- Barra superior de navegación. -->
+        <div class="logo-container"> <!-- Marca del sistema. -->
+            <h1><a href="../index.html">Florería Enterprise</a></h1> <!-- Enlace principal de logotipo. -->
+        </div> <!-- Fin de marca. -->
+        <div class="acciones-derecha"> <!-- Contenedor de acciones superiores. -->
+            <a href="config.html" class="btn-secundario">⚙️ Configuración</a> <!-- Enlace a Configuración. -->
+            <a href="../index.html" class="btn-primario">🏠 Inicio</a> <!-- Enlace a Inicio. -->
+        </div> <!-- Fin de acciones. -->
+    </header> <!-- Fin de cabecera. -->
+
+    <!-- Layout de Dashboard Pantalla Completa -->
+    <div class="layout-inferior"> <!-- Layout inferior flexible. -->
+        <!-- Sidebar Fija Limpia -->
+        <aside class="sidebar-fija"> <!-- Barra lateral fija. -->
+            <nav class="navegacion"> <!-- Navegación navegable. -->
+                <ul> <!-- Lista de opciones navegables. -->
+                    <li><a href="../index.html">🏠 Inicio</a></li> <!-- Enlace a Inicio. -->
+                    <li><a href="#">💐 Arreglos Florales</a></li> <!-- Enlace a Arreglos Florales. -->
+                    <li><a href="../frente_class/flores_indi.html">🌹 Flores Individuales</a></li> <!-- Enlace a Flores Individuales. -->
+                    <li><a href="../frente_class/plantas_macetas.html">🪴 Plantas y Macetas</a></li> <!-- Enlace a Plantas y Macetas. -->
+                    <li><a href="config.html" class="activo">⚙️ Configuración</a></li> <!-- Enlace a Configuración (Activo). -->
+                </ul> <!-- Fin de lista. -->
+            </nav> <!-- Fin de navegación. -->
+        </aside> <!-- Fin de barra lateral. -->
+
+        <!-- Área de Trabajo Principal -->
+        <main class="area-trabajo"> <!-- Área donde se renderiza el dashboard. -->
+            <div class="contenido"> <!-- Contenedor del módulo. -->
+
+                <!-- Encabezado de la Sección -->
+                <div class="dashboard-header"> <!-- Encabezado de la sección. -->
+                    <h2>Módulo de Actualización de Inventario</h2> <!-- Título de sección. -->
+                    <p>Busque, consulte y edite los datos de las flores y plantas registradas en la maqueta.</p> <!-- Descripción. -->
+                </div> <!-- Fin de encabezado. -->
+
+                <!-- Resumen de Métricas KPI de Muestra -->
+                <div class="kpi-grid"> <!-- Grilla de 4 tarjetas de métricas. -->
+                    <div class="kpi-card"> <!-- Tarjeta KPI Total Registros. -->
+                        <div class="kpi-info"> <!-- Información KPI. -->
+                            <h4>Total Registros</h4> <!-- Título de métrica. -->
+                            <div class="kpi-value">128</div> <!-- Valor de total. -->
+                        </div> <!-- Fin info. -->
+                        <div class="kpi-icon">📦</div> <!-- Ícono representativo. -->
+                    </div> <!-- Fin tarjeta. -->
+
+                    <div class="kpi-card"> <!-- Tarjeta KPI Stock Bajo. -->
+                        <div class="kpi-info"> <!-- Información KPI. -->
+                            <h4>Stock Bajo</h4> <!-- Título de métrica. -->
+                            <div class="kpi-value" style="color: var(--warning-text);">5</div> <!-- Valor con alerta preventiva. -->
+                        </div> <!-- Fin info. -->
+                        <div class="kpi-icon">⚠️</div> <!-- Ícono de advertencia. -->
+                    </div> <!-- Fin tarjeta. -->
+
+                    <div class="kpi-card"> <!-- Tarjeta KPI Agotados. -->
+                        <div class="kpi-info"> <!-- Información KPI. -->
+                            <h4>Agotados</h4> <!-- Título de métrica. -->
+                            <div class="kpi-value" style="color: var(--danger-text);">2</div> <!-- Valor con alerta crítica. -->
+                        </div> <!-- Fin info. -->
+                        <div class="kpi-icon">🚫</div> <!-- Ícono de prohibido/agotado. -->
+                    </div> <!-- Fin tarjeta. -->
+
+                    <div class="kpi-card"> <!-- Tarjeta KPI Categorías. -->
+                        <div class="kpi-info"> <!-- Información KPI. -->
+                            <h4>Categorías</h4> <!-- Título de métrica. -->
+                            <div class="kpi-value">4</div> <!-- Valor total de categorías. -->
+                        </div> <!-- Fin info. -->
+                        <div class="kpi-icon">💐</div> <!-- Ícono de flor/categoría. -->
+                    </div> <!-- Fin tarjeta. -->
+                </div> <!-- Fin de la grilla KPI. -->
+
+                <!-- Dashboard Dividido en 2 Columnas -->
+                <div class="dashboard-split"> <!-- Grilla dividida en 2 columnas principales. -->
+
+                    <!-- Columna Izquierda: Búsqueda y Tabla Interactiva -->
+                    <div class="panel-box"> <!-- Panel izquierdo para consulta. -->
+                        <div class="panel-title"> <!-- Título del panel de búsqueda. -->
+                            <span>🔍 Consulta de Registro</span> <!-- Título. -->
+                            <span class="badge-status" style="background-color: var(--fondo-hover); color: var(--color-texto-suave);">Vista de Maqueta</span> <!-- Distintivo de maqueta. -->
+                        </div> <!-- Fin título del panel. -->
+
+                        <!-- Filtros de Consulta -->
+                        <form id="form-consulta" action="#" method="GET" class="form-grid-2col" style="margin-bottom: 15px;"> <!-- Formulario de filtro de búsqueda. -->
+                            <div class="input-group"> <!-- Grupo para filtro por Nombre. -->
+                                <label for="buscar-nombre">Flor / Producto:</label> <!-- Etiqueta de búsqueda por producto. -->
+                                <input type="text" id="buscar-nombre" name="buscar_nombre" placeholder="Ej: Rosa, Orquídea"> <!-- Campo de texto de filtro. -->
+                            </div> <!-- Fin grupo Nombre. -->
+
+                            <div class="input-group"> <!-- Grupo para filtro por Categoría. -->
+                                <label for="buscar-categoria">Categoría:</label> <!-- Etiqueta de selección de categoría. -->
+                                <select id="buscar-categoria" name="buscar_categoria"> <!-- Menú desplegable de categorías. -->
+                                    <option value="">Todas las categorías</option> <!-- Opción global. -->
+                                    <option value="flores">Flores Individuales</option> <!-- Opción Flores. -->
+                                    <option value="arreglos">Arreglos Florales</option> <!-- Opción Arreglos. -->
+                                    <option value="plantas">Plantas y Macetas</option> <!-- Opción Plantas. -->
+                                </select> <!-- Fin desplegable. -->
+                            </div> <!-- Fin grupo Categoría. -->
+
+                            <div class="span-full form-actions" style="margin-top: 0;"> <!-- Acciones del formulario de búsqueda a ancho completo. -->
+                                <button type="submit" class="btn-primario" style="flex: 1;">Buscar</button> <!-- Botón de búsqueda. -->
+                                <button type="reset" class="btn-secundario">Limpiar</button> <!-- Botón de restablecer búsqueda. -->
+                            </div> <!-- Fin de acciones. -->
+                        </form> <!-- Fin del formulario de consulta. -->
+
+                        <!-- Tabla de Selección de Registros -->
+                        <div class="table-responsive"> <!-- Contenedor scrolleable de tabla. -->
+                            <table> <!-- Tabla empresarial de registros. -->
+                                <thead> <!-- Encabezado de tabla. -->
+                                    <tr> <!-- Fila de cabecera. -->
+                                        <th>ID</th> <!-- Columna ID. -->
+                                        <th>Nombre</th> <!-- Columna Nombre. -->
+                                        <th>Categoría</th> <!-- Columna Categoría. -->
+                                        <th>Precio</th> <!-- Columna Precio. -->
+                                        <th>Stock</th> <!-- Columna Stock. -->
+                                        <th>Estado</th> <!-- Columna Estado. -->
+                                    </tr> <!-- Fin de fila cabecera. -->
+                                </thead> <!-- Fin de encabezado. -->
+                                <tbody> <!-- Cuerpo de datos de tabla. -->
+                                    <tr class="fila-seleccionada"> <!-- Fila 1 seleccionada actualmente. -->
+                                        <td><strong>001</strong></td> <!-- ID del producto. -->
+                                        <td>Rosa Roja de Té</td> <!-- Nombre del producto. -->
+                                        <td>Flores Individuales</td> <!-- Categoría. -->
+                                        <td>$15.00</td> <!-- Precio. -->
+                                        <td>45 u.</td> <!-- Stock. -->
+                                        <td><span class="badge-status badge-success">Disponible</span></td> <!-- Distintivo de disponible. -->
+                                    </tr> <!-- Fin de Fila 1. -->
+                                    <tr> <!-- Fila 2. -->
+                                        <td><strong>002</strong></td> <!-- ID del producto. -->
+                                        <td>Orquídea Blanca</td> <!-- Nombre del producto. -->
+                                        <td>Plantas y Macetas</td> <!-- Categoría. -->
+                                        <td>$120.00</td> <!-- Precio. -->
+                                        <td>4 u.</td> <!-- Stock. -->
+                                        <td><span class="badge-status badge-warning">Stock Bajo</span></td> <!-- Distintivo de advertencia. -->
+                                    </tr> <!-- Fin de Fila 2. -->
+                                    <tr> <!-- Fila 3. -->
+                                        <td><strong>003</strong></td> <!-- ID del producto. -->
+                                        <td>Girasol Gigante</td> <!-- Nombre del producto. -->
+                                        <td>Flores Individuales</td> <!-- Categoría. -->
+                                        <td>$25.00</td> <!-- Precio. -->
+                                        <td>0 u.</td> <!-- Stock. -->
+                                        <td><span class="badge-status badge-danger">Agotado</span></td> <!-- Distintivo de peligro/agotado. -->
+                                    </tr> <!-- Fin de Fila 3. -->
+                                    <tr> <!-- Fila 4. -->
+                                        <td><strong>004</strong></td> <!-- ID del producto. -->
+                                        <td>Arreglo Primavera</td> <!-- Nombre del producto. -->
+                                        <td>Arreglos Florales</td> <!-- Categoría. -->
+                                        <td>$350.00</td> <!-- Precio. -->
+                                        <td>12 u.</td> <!-- Stock. -->
+                                        <td><span class="badge-status badge-success">Disponible</span></td> <!-- Distintivo de disponible. -->
+                                    </tr> <!-- Fin de Fila 4. -->
+                                    <tr> <!-- Fila 5. -->
+                                        <td><strong>005</strong></td> <!-- ID del producto. -->
+                                        <td>Lirio Holandés</td> <!-- Nombre del producto. -->
+                                        <td>Flores Individuales</td> <!-- Categoría. -->
+                                        <td>$18.00</td> <!-- Precio. -->
+                                        <td>30 u.</td> <!-- Stock. -->
+                                        <td><span class="badge-status badge-success">Disponible</span></td> <!-- Distintivo de disponible. -->
+                                    </tr> <!-- Fin de Fila 5. -->
+                                </tbody> <!-- Fin del cuerpo de la tabla. -->
+                            </table> <!-- Fin de la tabla. -->
+                        </div> <!-- Fin de contenedor scrolleable. -->
+                    </div> <!-- Fin del panel izquierdo. -->
+
+                    <!-- Columna Derecha: Formulario Empresarial de Edición -->
+                    <div class="panel-box"> <!-- Panel derecho de edición de datos. -->
+                        <div class="panel-title"> <!-- Título del panel de edición. -->
+                            <span>✏️ Edición del Registro</span> <!-- Nombre del módulo de edición. -->
+                            <small class="nota">Modifique los campos necesarios</small> <!-- Nota informativa. -->
+                        </div> <!-- Fin de título del panel. -->
+
+                        <form id="form-actualizacion" action="#" method="POST"> <!-- Formulario de actualización POST. -->
+                            <fieldset> <!-- Grupo de identificación. -->
+                                <legend>Identificación</legend> <!-- Leyenda de grupo. -->
+                                <div class="form-grid-2col"> <!-- Grilla de 2 columnas. -->
+                                    <div class="input-group"> <!-- Grupo ID. -->
+                                        <label for="up-id">ID Registro:</label> <!-- Etiqueta ID. -->
+                                        <input type="text" id="up-id" name="up_id" value="001" readonly disabled> <!-- Campo deshabilitado con ID. -->
+                                    </div> <!-- Fin grupo ID. -->
+                                    <div class="input-group"> <!-- Grupo Categoría. -->
+                                        <label for="up-categoria">Categoría:</label> <!-- Etiqueta Categoría. -->
+                                        <select id="up-categoria" name="up_categoria" required> <!-- Selector de Categoría. -->
+                                            <option value="flores" selected>Flores Individuales</option> <!-- Opción Flores. -->
+                                            <option value="arreglos">Arreglos Florales</option> <!-- Opción Arreglos. -->
+                                            <option value="plantas">Plantas y Macetas</option> <!-- Opción Plantas. -->
+                                        </select> <!-- Fin selector. -->
+                                    </div> <!-- Fin grupo Categoría. -->
+                                </div> <!-- Fin grilla. -->
+                                <div class="input-group"> <!-- Grupo Nombre. -->
+                                    <label for="up-nombre">Nombre del Producto:</label> <!-- Etiqueta Nombre. -->
+                                    <input type="text" id="up-nombre" name="up_nombre" value="Rosa Roja de Té" required> <!-- Campo editable de Nombre. -->
+                                </div> <!-- Fin grupo Nombre. -->
+                            </fieldset> <!-- Fin del grupo de identificación. -->
+
+                            <fieldset> <!-- Grupo de especificaciones y ventas. -->
+                                <legend>Especificaciones y Comercial</legend> <!-- Leyenda de grupo. -->
+                                <div class="form-grid-2col"> <!-- Grilla de 2 columnas. -->
+                                    <div class="input-group"> <!-- Grupo Color. -->
+                                        <label for="up-color">Color:</label> <!-- Etiqueta Color. -->
+                                        <input type="text" id="up-color" name="up_color" value="Rojo Carmesí" required> <!-- Campo editable de Color. -->
+                                    </div> <!-- Fin grupo Color. -->
+                                    <div class="input-group"> <!-- Grupo Tamaño. -->
+                                        <label for="up-tamano">Tamaño / Talle:</label> <!-- Etiqueta Tamaño. -->
+                                        <input type="text" id="up-tamano" name="up_tamano" value="Mediana (40cm)" required> <!-- Campo editable de Tamaño. -->
+                                    </div> <!-- Fin grupo Tamaño. -->
+                                </div> <!-- Fin grilla. -->
+
+                                <div class="form-grid-2col"> <!-- Grilla secundaria de 2 columnas. -->
+                                    <div class="input-group"> <!-- Grupo Precio. -->
+                                        <label for="up-precio">Precio Unitario ($ MXN):</label> <!-- Etiqueta Precio. -->
+                                        <input type="number" id="up-precio" name="up_precio" step="0.50" min="0" value="15.00" required> <!-- Campo numérico de Precio. -->
+                                    </div> <!-- Fin grupo Precio. -->
+                                    <div class="input-group"> <!-- Grupo Stock. -->
+                                        <label for="up-cantidad">Stock Actual:</label> <!-- Etiqueta Stock. -->
+                                        <input type="number" id="up-cantidad" name="up_cantidad" min="0" value="45" required> <!-- Campo numérico de Stock. -->
+                                    </div> <!-- Fin grupo Stock. -->
+                                </div> <!-- Fin grilla secundaria. -->
+                            </fieldset> <!-- Fin del grupo de especificaciones. -->
+
+                            <div class="input-group"> <!-- Grupo de notas técnicas. -->
+                                <label for="up-notas">Notas o Cuidados:</label> <!-- Etiqueta Notas. -->
+                                <textarea id="up-notas" name="up_notas" rows="2" placeholder="Información técnica o de conservación..."></textarea> <!-- Área de texto de notas. -->
+                            </div> <!-- Fin grupo Notas. -->
+
+                            <div class="form-actions"> <!-- Contenedor de acciones del formulario. -->
+                                <button type="submit" class="btn-primario" style="flex: 2;">💾 Guardar Cambios</button> <!-- Botón de guardado. -->
+                                <button type="reset" class="btn-secundario" style="flex: 1;">Restablecer</button> <!-- Botón de restablecer. -->
+                                <button type="button" class="btn-danger">🗑️ Eliminar</button> <!-- Botón de eliminación. -->
+                            </div> <!-- Fin de acciones. -->
+                        </form> <!-- Fin del formulario de actualización. -->
+                    </div> <!-- Fin del panel derecho. -->
+
+                </div> <!-- Fin de la grilla dividida. -->
+
+            </div> <!-- Fin del contenido. -->
+        </main> <!-- Fin de área principal. -->
+    </div> <!-- Fin del layout inferior. -->
+
+    <!-- Pie de página Global -->
+    <footer> <!-- Pie de página global. -->
+        <p>&copy; 2026 Florería. Todos los derechos reservados.</p> <!-- Mensaje de copyright. -->
+    </footer> <!-- Fin del pie de página. -->
+
+</body> <!-- Fin del cuerpo. -->
+
+</html> <!-- Fin del documento. -->
