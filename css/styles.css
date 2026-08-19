@@ -1,48 +1,76 @@
 :root {
-    /* --- Colores Empresariales: Tema Claro --- */
-    --fondo-principal: #F1F5F9; /* Fondo gris claro suave para la app. */
-    --fondo-sidebar: #FFFFFF; /* Fondo blanco para tarjetas y barra lateral. */
-    --color-texto: #0F172A; /* Color de texto principal en tono pizarra oscuro. */
-    --color-texto-suave: #64748B; /* Color de texto secundario atenuado. */
-    --color-borde: #E2E8F0; /* Color de bordes y divisores finos. */
-    --fondo-hover: #F8FAFC; /* Color de fondo al pasar el cursor sobre elementos. */
+    /* 🎀 Fondos Nude / Blush */
+    --fondo-principal: #FCF4F6; /* Un rosa 'nude' ultra suave y cálido */
+    --fondo-sidebar: #FFFFFF; /* Blanco puro para tarjetas y barra lateral (da mucha limpieza) */
+    
+    /* 🍷 Textos y Contrastes */
+    --color-texto: #3A2C32; /* Un gris/taupe cálido oscuro, mucho más suave que el negro */
+    --color-texto-suave: #8A7A81; /* Taupe medio para textos secundarios */
+    --color-borde: #F0E4E8; /* Bordes suaves que combinan con el fondo */
+    --fondo-hover: #F7EAEF; /* Resalte delicado al pasar el mouse */
 
-    --accent: #C74062; /* Color de acento magenta/rosa elegante para botones principales. */
-    --accent-dark: #9F2D49; /* Tono de acento oscuro para estado hover. */
-    --color-texto-boton: #FFFFFF; /* Color blanco de texto en botones primarios. */
-    --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03); /* Sombra suave. */
+    /* 🌺 Acento Floral Principal */
+    --accent: #D6285A; /* Rosa Carmín/Frambuesa. Súper elegante y vivo */
+    --accent-dark: #A81B43; /* Carmín oscuro para interacciones */
+    --color-texto-boton: #FFFFFF;
 
-    /* Estados de Inventario */
-    --success-bg: #DCFCE7; /* Fondo verde para estado disponible. */
-    --success-text: #15803D; /* Texto verde oscuro para disponible. */
-    --warning-bg: #FEF3C7; /* Fondo amarillo para estado stock bajo. */
-    --warning-text: #B45309; /* Texto amarillo oscuro para stock bajo. */
-    --danger-bg: #FEE2E2; /* Fondo rojo para estado agotado o eliminar. */
-    --danger-text: #B91C1C; /* Texto rojo para estado agotado. */
+    /* 🌿 Elementos Secundarios */
+    --color-agua: #4FC3F7; /* Azul celeste */
+    --color-tallo: #2E8B57; /* Verde hoja elegante */
+
+    --shadow: 0 4px 15px -3px rgba(58, 44, 50, 0.08); /* Sombra cálida muy sutil */
+
+    /* Alertas de Inventario */
+    --success-bg: #E8F5E9; 
+    --success-text: #2E8B57; 
+    --warning-bg: #FFF3E0; 
+    --warning-text: #E65100; 
+    --danger-bg: #FFEBEE;
+    --danger-text: #D6285A;
+
+    /* 🎬 ANIMACIÓN: CRECIMIENTO EN MODO CLARO */
+    --anim-brote: #8A7A81; 
+    --anim-tallo: var(--color-tallo); 
+    --anim-flor: var(--accent); 
+    --anim-glow: transparent;
 }
+
+
 
 @media (prefers-color-scheme: dark) {
     :root {
-        /* --- Colores Empresariales: Tema Oscuro --- */
-        --fondo-principal: #0F172A; /* Fondo azul noche oscuro. */
-        --fondo-sidebar: #1E293B; /* Fondo de paneles y tarjetas en modo oscuro. */
-        --color-texto: #F8FAFC; /* Texto blanco brillante. */
-        --color-texto-suave: #94A3B8; /* Texto secundario gris claro. */
-        --color-borde: #334155; /* Bordes en modo oscuro. */
-        --fondo-hover: #334155; /* Fondo de selección en modo oscuro. */
+        /* 🍃 Tonos Profundos (Follaje denso y Rocas) */
+        --fondo-principal: #171A18; /* Verde/Gris muy oscuro (Como ver un bosque de noche) */
+        --fondo-sidebar: #222724; /* Tono piedra de estanque o sombra de hoja gruesa */
+        --color-texto: #EAECEB; /* Blanco rocío (No cansa la vista) */
+        --color-texto-suave: #9BA39E; /* Musgo plateado / grisáceo */
+        --color-borde: #37403B; /* Verde pino oscuro para divisiones */
+        --fondo-hover: #2D3631; /* Resalte de hojas a la luz de la luna */
 
-        --accent: #F43F5E; /* Acento rosa neón brillante en modo oscuro. */
-        --accent-dark: #E11D48; /* Acento rosa neón oscuro. */
-        --color-texto-boton: #FFFFFF; /* Texto blanco para botones. */
-        --shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3); /* Sombra acentuada en modo oscuro. */
+        /* 🌺 Color Botánico Nocturno (Bioluminiscencia) */
+        --accent: #F06292; /* Rosa Nenúfar vibrante (Altamente contrastante y femenino) */
+        --accent-dark: #D81B60; /* Fucsia profundo */
+        --color-texto-boton: #FFFFFF;
 
-        /* Estados Oscuro */
-        --success-bg: rgba(22, 101, 52, 0.3); /* Fondo verde translúcido. */
-        --success-text: #4ADE80; /* Texto verde neón. */
-        --warning-bg: rgba(146, 64, 14, 0.3); /* Fondo amarillo translúcido. */
-        --warning-text: #FBBF24; /* Texto amarillo neón. */
-        --danger-bg: rgba(153, 27, 27, 0.3); /* Fondo rojo translúcido. */
-        --danger-text: #F87171; /* Texto rojo neón. */
+        /* 🌿 Elementos del Arreglo Iluminados */
+        --color-agua: #4FC3F7; /* Azul agua cristalina reflejando luz */
+        --color-tallo: #69F0AE; /* Verde helecho brillante / Neón orgánico */
+
+        --shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5);
+
+        /* Alertas de Inventario en modo oscuro */
+        --success-bg: rgba(46, 125, 50, 0.3);
+        --success-text: var(--color-tallo);
+        --warning-bg: rgba(245, 127, 23, 0.3);
+        --warning-text: #FFE082; /* Amarillo polen brillante */
+        --danger-bg: rgba(198, 40, 40, 0.3);
+        --danger-text: #EF9A9A; /* Rosa rojizo claro */
+
+        /* 🎬 ANIMACIÓN: CRECIMIENTO EN MODO OSCURO */
+        --anim-brote: #8D6E63; /* Semilla café iluminada sutilmente */
+        --anim-tallo: var(--color-tallo); /* Tallo verde brillante */
+        --anim-flor: var(--accent); /* Flor rosa encendida */
+        --anim-glow: rgba(240, 98, 146, 0.5); /* Resplandor del nenúfar en la noche */
     }
 }
 
@@ -137,10 +165,23 @@ body {
 }
 
 .navegacion ul li a.activo {
-    background-color: var(--fondo-hover); /* Fondo del ítem activo. */
-    color: var(--accent); /* Texto en color de acento. */
-    font-weight: 600; /* Texto en negrita. */
-    border-left: 4px solid var(--accent); /* Borde lateral izquierdo acentuado. */
+    background-color: var(--fondo-hover);
+    color: var(--accent);
+    font-weight: 600;
+    border-left: 4px solid var(--accent);
+}
+
+/* === NUEVAS REGLAS PARA LA ANIMACIÓN === */
+/* Cuando llega a Plantas y Macetas */
+.navegacion ul li a.activo-hoja {
+    color: var(--anim-tallo);
+    text-shadow: 0 0 8px rgba(52, 211, 153, 0.4); 
+}
+
+/* Cuando llega a Inicio (Flor abierta) */
+.navegacion ul li a.activo-flor {
+    color: var(--anim-flor);
+    text-shadow: 0 0 12px var(--anim-glow);
 }
 
 /* Área de Trabajo Principal - 100% de Ancho Disponible */

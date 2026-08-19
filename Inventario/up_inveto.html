@@ -17,8 +17,8 @@
             <h1><a href="../index.html">Florería Enterprise</a></h1> <!-- Enlace principal de logotipo. -->
         </div> <!-- Fin de marca. -->
         <div class="acciones-derecha"> <!-- Contenedor de acciones superiores. -->
-            <a href="config.html" class="btn-secundario">⚙️ Configuración</a> <!-- Enlace a Configuración. -->
-            <a href="../index.html" class="btn-primario">🏠 Inicio</a> <!-- Enlace a Inicio. -->
+            <a href="#" class="btn-secundario">Iniciar Sesión</a> <!-- Enlace a inicio de sesión. -->
+            <a href="#" class="btn-primario">Registrarse</a> <!-- Enlace al registro de usuario. -->
         </div> <!-- Fin de acciones. -->
     </header> <!-- Fin de cabecera. -->
 
@@ -47,12 +47,12 @@
                     <p>Busque, consulte y edite los datos de las flores y plantas registradas en la maqueta.</p> <!-- Descripción. -->
                 </div> <!-- Fin de encabezado. -->
 
-                <!-- Resumen de Métricas KPI de Muestra -->
+                <!-- Resumen de Métricas KPI -->
                 <div class="kpi-grid"> <!-- Grilla de 4 tarjetas de métricas. -->
                     <div class="kpi-card"> <!-- Tarjeta KPI Total Registros. -->
                         <div class="kpi-info"> <!-- Información KPI. -->
                             <h4>Total Registros</h4> <!-- Título de métrica. -->
-                            <div class="kpi-value">128</div> <!-- Valor de total. -->
+                            <div class="kpi-value">0</div> <!-- Valor de total. -->
                         </div> <!-- Fin info. -->
                         <div class="kpi-icon">📦</div> <!-- Ícono representativo. -->
                     </div> <!-- Fin tarjeta. -->
@@ -60,7 +60,7 @@
                     <div class="kpi-card"> <!-- Tarjeta KPI Stock Bajo. -->
                         <div class="kpi-info"> <!-- Información KPI. -->
                             <h4>Stock Bajo</h4> <!-- Título de métrica. -->
-                            <div class="kpi-value" style="color: var(--warning-text);">5</div> <!-- Valor con alerta preventiva. -->
+                            <div class="kpi-value" style="color: var(--warning-text);">0</div> <!-- Valor con alerta preventiva. -->
                         </div> <!-- Fin info. -->
                         <div class="kpi-icon">⚠️</div> <!-- Ícono de advertencia. -->
                     </div> <!-- Fin tarjeta. -->
@@ -68,7 +68,7 @@
                     <div class="kpi-card"> <!-- Tarjeta KPI Agotados. -->
                         <div class="kpi-info"> <!-- Información KPI. -->
                             <h4>Agotados</h4> <!-- Título de métrica. -->
-                            <div class="kpi-value" style="color: var(--danger-text);">2</div> <!-- Valor con alerta crítica. -->
+                            <div class="kpi-value" style="color: var(--danger-text);">0</div> <!-- Valor con alerta crítica. -->
                         </div> <!-- Fin info. -->
                         <div class="kpi-icon">🚫</div> <!-- Ícono de prohibido/agotado. -->
                     </div> <!-- Fin tarjeta. -->
@@ -76,7 +76,7 @@
                     <div class="kpi-card"> <!-- Tarjeta KPI Categorías. -->
                         <div class="kpi-info"> <!-- Información KPI. -->
                             <h4>Categorías</h4> <!-- Título de métrica. -->
-                            <div class="kpi-value">4</div> <!-- Valor total de categorías. -->
+                            <div class="kpi-value">0</div> <!-- Valor total de categorías. -->
                         </div> <!-- Fin info. -->
                         <div class="kpi-icon">💐</div> <!-- Ícono de flor/categoría. -->
                     </div> <!-- Fin tarjeta. -->
@@ -103,9 +103,6 @@
                                 <label for="buscar-categoria">Categoría:</label> <!-- Etiqueta de selección de categoría. -->
                                 <select id="buscar-categoria" name="buscar_categoria"> <!-- Menú desplegable de categorías. -->
                                     <option value="">Todas las categorías</option> <!-- Opción global. -->
-                                    <option value="flores">Flores Individuales</option> <!-- Opción Flores. -->
-                                    <option value="arreglos">Arreglos Florales</option> <!-- Opción Arreglos. -->
-                                    <option value="plantas">Plantas y Macetas</option> <!-- Opción Plantas. -->
                                 </select> <!-- Fin desplegable. -->
                             </div> <!-- Fin grupo Categoría. -->
 
@@ -128,118 +125,189 @@
                                         <th>Estado</th> <!-- Columna Estado. -->
                                     </tr> <!-- Fin de fila cabecera. -->
                                 </thead> <!-- Fin de encabezado. -->
-                                <tbody> <!-- Cuerpo de datos de tabla. -->
-                                    <tr class="fila-seleccionada"> <!-- Fila 1 seleccionada actualmente. -->
-                                        <td><strong>001</strong></td> <!-- ID del producto. -->
-                                        <td>Rosa Roja de Té</td> <!-- Nombre del producto. -->
-                                        <td>Flores Individuales</td> <!-- Categoría. -->
-                                        <td>$15.00</td> <!-- Precio. -->
-                                        <td>45 u.</td> <!-- Stock. -->
-                                        <td><span class="badge-status badge-success">Disponible</span></td> <!-- Distintivo de disponible. -->
-                                    </tr> <!-- Fin de Fila 1. -->
-                                    <tr> <!-- Fila 2. -->
-                                        <td><strong>002</strong></td> <!-- ID del producto. -->
-                                        <td>Orquídea Blanca</td> <!-- Nombre del producto. -->
-                                        <td>Plantas y Macetas</td> <!-- Categoría. -->
-                                        <td>$120.00</td> <!-- Precio. -->
-                                        <td>4 u.</td> <!-- Stock. -->
-                                        <td><span class="badge-status badge-warning">Stock Bajo</span></td> <!-- Distintivo de advertencia. -->
-                                    </tr> <!-- Fin de Fila 2. -->
-                                    <tr> <!-- Fila 3. -->
-                                        <td><strong>003</strong></td> <!-- ID del producto. -->
-                                        <td>Girasol Gigante</td> <!-- Nombre del producto. -->
-                                        <td>Flores Individuales</td> <!-- Categoría. -->
-                                        <td>$25.00</td> <!-- Precio. -->
-                                        <td>0 u.</td> <!-- Stock. -->
-                                        <td><span class="badge-status badge-danger">Agotado</span></td> <!-- Distintivo de peligro/agotado. -->
-                                    </tr> <!-- Fin de Fila 3. -->
-                                    <tr> <!-- Fila 4. -->
-                                        <td><strong>004</strong></td> <!-- ID del producto. -->
-                                        <td>Arreglo Primavera</td> <!-- Nombre del producto. -->
-                                        <td>Arreglos Florales</td> <!-- Categoría. -->
-                                        <td>$350.00</td> <!-- Precio. -->
-                                        <td>12 u.</td> <!-- Stock. -->
-                                        <td><span class="badge-status badge-success">Disponible</span></td> <!-- Distintivo de disponible. -->
-                                    </tr> <!-- Fin de Fila 4. -->
-                                    <tr> <!-- Fila 5. -->
-                                        <td><strong>005</strong></td> <!-- ID del producto. -->
-                                        <td>Lirio Holandés</td> <!-- Nombre del producto. -->
-                                        <td>Flores Individuales</td> <!-- Categoría. -->
-                                        <td>$18.00</td> <!-- Precio. -->
-                                        <td>30 u.</td> <!-- Stock. -->
-                                        <td><span class="badge-status badge-success">Disponible</span></td> <!-- Distintivo de disponible. -->
-                                    </tr> <!-- Fin de Fila 5. -->
+                                <tbody> <!-- Cuerpo de datos de tabla vacía. -->
                                 </tbody> <!-- Fin del cuerpo de la tabla. -->
                             </table> <!-- Fin de la tabla. -->
                         </div> <!-- Fin de contenedor scrolleable. -->
                     </div> <!-- Fin del panel izquierdo. -->
 
-                    <!-- Columna Derecha: Formulario Empresarial de Edición -->
-                    <div class="panel-box"> <!-- Panel derecho de edición de datos. -->
+                    <!-- Columna Derecha: Formulario Empresarial de Edición con Pestañas -->
+                    <div class="panel-box panel-edicion"> <!-- Panel derecho de edición con pestañas. -->
                         <div class="panel-title"> <!-- Título del panel de edición. -->
                             <span>✏️ Edición del Registro</span> <!-- Nombre del módulo de edición. -->
                             <small class="nota">Modifique los campos necesarios</small> <!-- Nota informativa. -->
                         </div> <!-- Fin de título del panel. -->
 
-                        <form id="form-actualizacion" action="#" method="POST"> <!-- Formulario de actualización POST. -->
-                            <fieldset> <!-- Grupo de identificación. -->
-                                <legend>Identificación</legend> <!-- Leyenda de grupo. -->
-                                <div class="form-grid-2col"> <!-- Grilla de 2 columnas. -->
-                                    <div class="input-group"> <!-- Grupo ID. -->
-                                        <label for="up-id">ID Registro:</label> <!-- Etiqueta ID. -->
-                                        <input type="text" id="up-id" name="up_id" value="001" readonly disabled> <!-- Campo deshabilitado con ID. -->
-                                    </div> <!-- Fin grupo ID. -->
-                                    <div class="input-group"> <!-- Grupo Categoría. -->
-                                        <label for="up-categoria">Categoría:</label> <!-- Etiqueta Categoría. -->
-                                        <select id="up-categoria" name="up_categoria" required> <!-- Selector de Categoría. -->
-                                            <option value="flores" selected>Flores Individuales</option> <!-- Opción Flores. -->
-                                            <option value="arreglos">Arreglos Florales</option> <!-- Opción Arreglos. -->
-                                            <option value="plantas">Plantas y Macetas</option> <!-- Opción Plantas. -->
+                        <!-- Navegación por Pestañas (Tabs) -->
+                        <div class="tabs-header"> <!-- Cabecera de navegación de pestañas. -->
+                            <button type="button" class="tab-btn active" data-tab="tab-info">📌 Información Base</button> <!-- Pestaña 1. -->
+                            <button type="button" class="tab-btn" data-tab="tab-logistica">📦 Logística y Proveedores</button> <!-- Pestaña 2. -->
+                            <button type="button" class="tab-btn" data-tab="tab-ecommerce">🌿 E-commerce y Cuidados</button> <!-- Pestaña 3. -->
+                        </div> <!-- Fin cabecera de pestañas. -->
+
+                        <form id="form-actualizacion" action="#" method="POST" class="form-tabs-container"> <!-- Formulario contenedor flexible. -->
+                            <div class="tabs-body"> <!-- Contenido scrolleable de pestañas. -->
+
+                                <!-- PESTAÑA 1: Información Base -->
+                                <div id="tab-info" class="tab-pane active"> <!-- Panel Pestaña 1. -->
+                                    <div class="form-grid-2col"> <!-- Grilla de 2 columnas ID y Categoría. -->
+                                        <div class="input-group"> <!-- Grupo ID. -->
+                                            <label for="up-id">ID Registro:</label> <!-- Etiqueta ID. -->
+                                            <input type="text" id="up-id" name="up_id" value="" placeholder="---" readonly disabled> <!-- Campo deshabilitado sin ID. -->
+                                        </div> <!-- Fin grupo ID. -->
+                                        <div class="input-group"> <!-- Grupo Categoría. -->
+                                            <label for="up-categoria">Categoría:</label> <!-- Etiqueta Categoría. -->
+                                            <select id="up-categoria" name="up_categoria" required> <!-- Selector de Categoría. -->
+                                                <option value="" selected disabled>-- Seleccionar Categoría --</option> <!-- Opción vacía. -->
+                                            </select> <!-- Fin selector. -->
+                                        </div> <!-- Fin grupo Categoría. -->
+                                    </div> <!-- Fin grilla ID/Categoría. -->
+
+                                    <div class="input-group"> <!-- Grupo Nombre del producto. -->
+                                        <label for="up-nombre">Nombre del Producto:</label> <!-- Etiqueta Nombre. -->
+                                        <input type="text" id="up-nombre" name="up_nombre" value="" placeholder="Ej: Rosa Roja de Té" required> <!-- Campo Nombre. -->
+                                    </div> <!-- Fin grupo Nombre. -->
+
+                                    <div class="form-grid-2col"> <!-- Grilla de 2 columnas Color y Tamaño. -->
+                                        <div class="input-group"> <!-- Grupo Color. -->
+                                            <label for="up-color">Color:</label> <!-- Etiqueta Color. -->
+                                            <input type="text" id="up-color" name="up_color" value="" placeholder="Ej: Rojo Carmesí" required> <!-- Campo Color. -->
+                                        </div> <!-- Fin grupo Color. -->
+                                        <div class="input-group"> <!-- Grupo Tamaño. -->
+                                            <label for="up-tamano">Tamaño / Talle:</label> <!-- Etiqueta Tamaño. -->
+                                            <input type="text" id="up-tamano" name="up_tamano" value="" placeholder="Ej: Mediana (40cm)" required> <!-- Campo Tamaño. -->
+                                        </div> <!-- Fin grupo Tamaño. -->
+                                    </div> <!-- Fin grilla Color/Tamaño. -->
+
+                                    <div class="form-grid-2col"> <!-- Grilla de 2 columnas Precio y Stock. -->
+                                        <div class="input-group"> <!-- Grupo Precio. -->
+                                            <label for="up-precio">Precio Unitario ($ MXN):</label> <!-- Etiqueta Precio. -->
+                                            <input type="number" id="up-precio" name="up_precio" step="0.50" min="0" value="" placeholder="0.00" required> <!-- Campo Precio. -->
+                                        </div> <!-- Fin grupo Precio. -->
+                                        <div class="input-group"> <!-- Grupo Stock. -->
+                                            <label for="up-cantidad">Stock Actual:</label> <!-- Etiqueta Stock. -->
+                                            <input type="number" id="up-cantidad" name="up_cantidad" min="0" value="" placeholder="0" required> <!-- Campo Stock. -->
+                                        </div> <!-- Fin grupo Stock. -->
+                                    </div> <!-- Fin grilla Precio/Stock. -->
+
+                                    <div class="input-group"> <!-- Grupo Estado. -->
+                                        <label for="up-estado">Estado del Producto:</label> <!-- Etiqueta Estado. -->
+                                        <select id="up-estado" name="up_estado"> <!-- Selector de Estado. -->
+                                            <option value="activo" selected>Activo</option> <!-- Opción Activo. -->
+                                            <option value="inactivo">Inactivo</option> <!-- Opción Inactivo. -->
                                         </select> <!-- Fin selector. -->
-                                    </div> <!-- Fin grupo Categoría. -->
-                                </div> <!-- Fin grilla. -->
-                                <div class="input-group"> <!-- Grupo Nombre. -->
-                                    <label for="up-nombre">Nombre del Producto:</label> <!-- Etiqueta Nombre. -->
-                                    <input type="text" id="up-nombre" name="up_nombre" value="Rosa Roja de Té" required> <!-- Campo editable de Nombre. -->
-                                </div> <!-- Fin grupo Nombre. -->
-                            </fieldset> <!-- Fin del grupo de identificación. -->
+                                    </div> <!-- Fin grupo Estado. -->
+                                </div> <!-- Fin Pestaña 1. -->
 
-                            <fieldset> <!-- Grupo de especificaciones y ventas. -->
-                                <legend>Especificaciones y Comercial</legend> <!-- Leyenda de grupo. -->
-                                <div class="form-grid-2col"> <!-- Grilla de 2 columnas. -->
-                                    <div class="input-group"> <!-- Grupo Color. -->
-                                        <label for="up-color">Color:</label> <!-- Etiqueta Color. -->
-                                        <input type="text" id="up-color" name="up_color" value="Rojo Carmesí" required> <!-- Campo editable de Color. -->
-                                    </div> <!-- Fin grupo Color. -->
-                                    <div class="input-group"> <!-- Grupo Tamaño. -->
-                                        <label for="up-tamano">Tamaño / Talle:</label> <!-- Etiqueta Tamaño. -->
-                                        <input type="text" id="up-tamano" name="up_tamano" value="Mediana (40cm)" required> <!-- Campo editable de Tamaño. -->
-                                    </div> <!-- Fin grupo Tamaño. -->
-                                </div> <!-- Fin grilla. -->
+                                <!-- PESTAÑA 2: Logística y Proveedores -->
+                                <div id="tab-logistica" class="tab-pane"> <!-- Panel Pestaña 2. -->
+                                    <div class="form-grid-2col"> <!-- Grilla 2 columnas SKU y Costo. -->
+                                        <div class="input-group"> <!-- Grupo SKU. -->
+                                            <label for="up-sku">SKU / Código de Barras:</label> <!-- Etiqueta SKU. -->
+                                            <input type="text" id="up-sku" name="up_sku" placeholder="Ej: FLO-ROSA-001"> <!-- Campo SKU. -->
+                                        </div> <!-- Fin grupo SKU. -->
+                                        <div class="input-group"> <!-- Grupo Costo. -->
+                                            <label for="up-costo">Costo de Compra ($ MXN):</label> <!-- Etiqueta Costo. -->
+                                            <input type="number" id="up-costo" name="up_costo" step="0.50" min="0" placeholder="0.00"> <!-- Campo Costo. -->
+                                        </div> <!-- Fin grupo Costo. -->
+                                    </div> <!-- Fin grilla SKU/Costo. -->
 
-                                <div class="form-grid-2col"> <!-- Grilla secundaria de 2 columnas. -->
-                                    <div class="input-group"> <!-- Grupo Precio. -->
-                                        <label for="up-precio">Precio Unitario ($ MXN):</label> <!-- Etiqueta Precio. -->
-                                        <input type="number" id="up-precio" name="up_precio" step="0.50" min="0" value="15.00" required> <!-- Campo numérico de Precio. -->
-                                    </div> <!-- Fin grupo Precio. -->
-                                    <div class="input-group"> <!-- Grupo Stock. -->
-                                        <label for="up-cantidad">Stock Actual:</label> <!-- Etiqueta Stock. -->
-                                        <input type="number" id="up-cantidad" name="up_cantidad" min="0" value="45" required> <!-- Campo numérico de Stock. -->
-                                    </div> <!-- Fin grupo Stock. -->
-                                </div> <!-- Fin grilla secundaria. -->
-                            </fieldset> <!-- Fin del grupo de especificaciones. -->
+                                    <div class="form-grid-2col"> <!-- Grilla 2 columnas Stock Mínimo y Peso. -->
+                                        <div class="input-group"> <!-- Grupo Stock Mínimo. -->
+                                            <label for="up-stock-minimo">Stock Mínimo / Alerta:</label> <!-- Etiqueta Stock Mínimo. -->
+                                            <input type="number" id="up-stock-minimo" name="up_stock_minimo" min="0" placeholder="5"> <!-- Campo Stock Mínimo. -->
+                                        </div> <!-- Fin grupo Stock Mínimo. -->
+                                        <div class="input-group"> <!-- Grupo Peso. -->
+                                            <label for="up-peso">Peso (kg):</label> <!-- Etiqueta Peso. -->
+                                            <input type="number" id="up-peso" name="up_peso" step="0.01" min="0" placeholder="0.50"> <!-- Campo Peso. -->
+                                        </div> <!-- Fin grupo Peso. -->
+                                    </div> <!-- Fin grilla Stock Mínimo/Peso. -->
 
-                            <div class="input-group"> <!-- Grupo de notas técnicas. -->
-                                <label for="up-notas">Notas o Cuidados:</label> <!-- Etiqueta Notas. -->
-                                <textarea id="up-notas" name="up_notas" rows="2" placeholder="Información técnica o de conservación..."></textarea> <!-- Área de texto de notas. -->
-                            </div> <!-- Fin grupo Notas. -->
+                                    <div class="input-group"> <!-- Grupo Dimensiones del Paquete. -->
+                                        <label>Dimensiones del Paquete (cm):</label> <!-- Etiqueta Dimensiones. -->
+                                        <div class="form-grid-3col"> <!-- Grilla de 3 columnas (Alto, Ancho, Largo). -->
+                                            <input type="number" id="up-dim-alto" name="up_dim_alto" min="0" placeholder="Alto (cm)"> <!-- Campo Alto. -->
+                                            <input type="number" id="up-dim-ancho" name="up_dim_ancho" min="0" placeholder="Ancho (cm)"> <!-- Campo Ancho. -->
+                                            <input type="number" id="up-dim-largo" name="up_dim_largo" min="0" placeholder="Largo (cm)"> <!-- Campo Largo. -->
+                                        </div> <!-- Fin grilla 3 columnas. -->
+                                    </div> <!-- Fin grupo Dimensiones. -->
 
-                            <div class="form-actions"> <!-- Contenedor de acciones del formulario. -->
-                                <button type="submit" class="btn-primario" style="flex: 2;">💾 Guardar Cambios</button> <!-- Botón de guardado. -->
+                                    <div class="form-grid-2col"> <!-- Grilla 2 columnas Ubicación y Proveedor. -->
+                                        <div class="input-group"> <!-- Grupo Ubicación. -->
+                                            <label for="up-ubicacion">Ubicación en Almacén:</label> <!-- Etiqueta Ubicación. -->
+                                            <input type="text" id="up-ubicacion" name="up_ubicacion" placeholder="Ej: Pasillo A - Estante 3"> <!-- Campo Ubicación. -->
+                                        </div> <!-- Fin grupo Ubicación. -->
+                                        <div class="input-group"> <!-- Grupo Proveedor. -->
+                                            <label for="up-proveedor">Proveedor:</label> <!-- Etiqueta Proveedor. -->
+                                            <select id="up-proveedor" name="up_proveedor"> <!-- Selector de Proveedor. -->
+                                                <option value="" disabled selected>-- Seleccionar Proveedor --</option> <!-- Opción por defecto. -->
+                                                <option value="invernadero_central">Invernadero Central</option> <!-- Proveedor 1. -->
+                                                <option value="importadora_flora">Importadora Flora Internacional</option> <!-- Proveedor 2. -->
+                                                <option value="distribuidora_local">Distribuidora Local de Botánica</option> <!-- Proveedor 3. -->
+                                            </select> <!-- Fin selector Proveedor. -->
+                                        </div> <!-- Fin grupo Proveedor. -->
+                                    </div> <!-- Fin grilla Ubicación/Proveedor. -->
+                                </div> <!-- Fin Pestaña 2. -->
+
+                                <!-- PESTAÑA 3: E-commerce y Cuidados -->
+                                <div id="tab-ecommerce" class="tab-pane"> <!-- Panel Pestaña 3. -->
+                                    <div class="input-group"> <!-- Grupo Fotografía del Producto. -->
+                                        <label>Fotografía del Producto:</label> <!-- Etiqueta Fotografía. -->
+                                        <div class="dropzone-square" id="dropzone-foto"> <!-- Zona Drag & Drop. -->
+                                            <input type="file" id="up-foto" name="up_foto" accept="image/*" class="dropzone-file"> <!-- Input tipo archivo oculto. -->
+                                            <div class="dropzone-content"> <!-- Contenido visual de la zona. -->
+                                                <span class="dropzone-icon">📷</span> <!-- Ícono de cámara. -->
+                                                <p class="dropzone-text">Arrastra una imagen aquí o <strong>haz clic para examinar</strong></p> <!-- Instrucción. -->
+                                                <small class="nota">Formatos soportados: JPG, PNG, WEBP (Máx. 5MB)</small> <!-- Nota de restricciones. -->
+                                            </div> <!-- Fin contenido zona. -->
+                                        </div> <!-- Fin zona Drag & Drop. -->
+                                    </div> <!-- Fin grupo Fotografía. -->
+
+                                    <div class="form-grid-2col"> <!-- Grilla 2 columnas Nivel de Luz y Frecuencia de Riego. -->
+                                        <div class="input-group"> <!-- Grupo Nivel de Luz. -->
+                                            <label for="up-luz">Nivel de Luz:</label> <!-- Etiqueta Luz. -->
+                                            <select id="up-luz" name="up_luz"> <!-- Selector Luz. -->
+                                                <option value="" disabled selected>-- Seleccionar Nivel --</option> <!-- Opción por defecto. -->
+                                                <option value="directa">Directa</option> <!-- Opción Directa. -->
+                                                <option value="indirecta">Indirecta</option> <!-- Opción Indirecta. -->
+                                                <option value="sombra">Sombra</option> <!-- Opción Sombra. -->
+                                            </select> <!-- Fin selector Luz. -->
+                                        </div> <!-- Fin grupo Luz. -->
+                                        <div class="input-group"> <!-- Grupo Frecuencia de Riego. -->
+                                            <label for="up-riego">Frecuencia de Riego:</label> <!-- Etiqueta Riego. -->
+                                            <select id="up-riego" name="up_riego"> <!-- Selector Riego. -->
+                                                <option value="" disabled selected>-- Seleccionar Frecuencia --</option> <!-- Opción por defecto. -->
+                                                <option value="diario">Diario</option> <!-- Opción Diario. -->
+                                                <option value="semanal">Semanal</option> <!-- Opción Semanal. -->
+                                                <option value="quincenal">Quincenal</option> <!-- Opción Quincenal. -->
+                                            </select> <!-- Fin selector Riego. -->
+                                        </div> <!-- Fin grupo Riego. -->
+                                    </div> <!-- Fin grilla Luz/Riego. -->
+
+                                    <div class="input-group"> <!-- Grupo Toggle Pet-Friendly. -->
+                                        <label>Seguridad para Mascotas:</label> <!-- Etiqueta Mascotas. -->
+                                        <label class="toggle-control"> <!-- Control Switch Toggle. -->
+                                            <input type="checkbox" id="up-petfriendly" name="up_petfriendly"> <!-- Checkbox interno. -->
+                                            <span class="toggle-slider"></span> <!-- Deslizador visual. -->
+                                            <span class="toggle-label" id="toggle-pet-status">Pet-Friendly (Segura para mascotas)</span> <!-- Leyenda de estado. -->
+                                        </label> <!-- Fin control. -->
+                                    </div> <!-- Fin grupo Toggle. -->
+
+                                    <div class="input-group span-full"> <!-- Grupo Notas o Cuidados a ancho completo. -->
+                                        <label for="up-notas">Notas o Cuidados:</label> <!-- Etiqueta Notas. -->
+                                        <textarea id="up-notas" name="up_notas" rows="3" placeholder="Información técnica o recomendaciones de conservación..."></textarea> <!-- Textarea. -->
+                                    </div> <!-- Fin grupo Notas. -->
+                                </div> <!-- Fin Pestaña 3. -->
+
+                            </div> <!-- Fin de tabs-body. -->
+
+                            <!-- Botones Acciones Inferiores Sticky -->
+                            <div class="form-actions form-actions-sticky"> <!-- Contenedor de acciones fijas. -->
+                                <button type="submit" class="btn-primario" style="flex: 2;">💾 Guardar Cambios</button> <!-- Botón de guardar. -->
                                 <button type="reset" class="btn-secundario" style="flex: 1;">Restablecer</button> <!-- Botón de restablecer. -->
-                                <button type="button" class="btn-danger">🗑️ Eliminar</button> <!-- Botón de eliminación. -->
-                            </div> <!-- Fin de acciones. -->
-                        </form> <!-- Fin del formulario de actualización. -->
+                                <button type="button" class="btn-danger">🗑️ Eliminar</button> <!-- Botón de eliminar. -->
+                            </div> <!-- Fin acciones fijas. -->
+                        </form> <!-- Fin del formulario. -->
                     </div> <!-- Fin del panel derecho. -->
 
                 </div> <!-- Fin de la grilla dividida. -->
@@ -252,6 +320,66 @@
     <footer> <!-- Pie de página global. -->
         <p>&copy; 2026 Florería. Todos los derechos reservados.</p> <!-- Mensaje de copyright. -->
     </footer> <!-- Fin del pie de página. -->
+
+    <!-- Script de interacción de Pestañas, Drag & Drop y Controles -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Cambio interactivas de Pestañas (Tabs)
+            const tabBtns = document.querySelectorAll('.tab-btn');
+            const tabPanes = document.querySelectorAll('.tab-pane');
+
+            tabBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const targetTab = btn.getAttribute('data-tab');
+
+                    tabBtns.forEach(b => b.classList.remove('active'));
+                    tabPanes.forEach(p => p.classList.remove('active'));
+
+                    btn.classList.add('active');
+                    const activePane = document.getElementById(targetTab);
+                    if (activePane) {
+                        activePane.classList.add('active');
+                    }
+                });
+            });
+
+            // Feedback visual Drag & Drop para subir fotografías
+            const dropzone = document.getElementById('dropzone-foto');
+            const fileInput = document.getElementById('up-foto');
+            const dropText = dropzone?.querySelector('.dropzone-text');
+
+            if (dropzone && fileInput) {
+                ['dragenter', 'dragover'].forEach(eventName => {
+                    dropzone.addEventListener(eventName, (e) => {
+                        e.preventDefault();
+                        dropzone.classList.add('drag-over');
+                    }, false);
+                });
+
+                ['dragleave', 'drop'].forEach(eventName => {
+                    dropzone.addEventListener(eventName, (e) => {
+                        e.preventDefault();
+                        dropzone.classList.remove('drag-over');
+                    }, false);
+                });
+
+                dropzone.addEventListener('drop', (e) => {
+                    const dt = e.dataTransfer;
+                    const files = dt.files;
+                    if (files.length) {
+                        fileInput.files = files;
+                        if (dropText) dropText.innerHTML = `Imagen seleccionada: <strong>${files[0].name}</strong>`;
+                    }
+                });
+
+                fileInput.addEventListener('change', () => {
+                    if (fileInput.files.length && dropText) {
+                        dropText.innerHTML = `Imagen seleccionada: <strong>${fileInput.files[0].name}</strong>`;
+                    }
+                });
+            }
+        });
+    </script>
 
 </body> <!-- Fin del cuerpo. -->
 

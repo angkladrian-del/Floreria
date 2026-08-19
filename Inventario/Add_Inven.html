@@ -17,8 +17,8 @@
             <h1><a href="../index.html">Florería Enterprise</a></h1> <!-- Enlace al inicio del sitio. -->
         </div> <!-- Fin de marca. -->
         <div class="acciones-derecha"> <!-- Contenedor de botones superiores. -->
-            <a href="config.html" class="btn-secundario">⚙️ Configuración</a> <!-- Enlace a Configuración. -->
-            <a href="../index.html" class="btn-primario">🏠 Inicio</a> <!-- Enlace a Inicio. -->
+            <a href="#" class="btn-secundario">Iniciar Sesión</a> <!-- Enlace a inicio de sesión. -->
+            <a href="#" class="btn-primario">Registrarse</a> <!-- Enlace al registro de usuario. -->
         </div> <!-- Fin de botones superiores. -->
     </header> <!-- Fin de la cabecera. -->
 
@@ -46,66 +46,148 @@
                     <p>Complete el formulario multi-columna para registrar flores, arreglos o plantas en el catálogo.</p> <!-- Instrucción. -->
                 </div> <!-- Fin de encabezado. -->
 
-                <div class="panel-box" style="max-width: 900px;"> <!-- Caja de panel para formulario. -->
-                    <div class="panel-title"> <!-- Título del panel. -->
-                        <span>📝 Formulario de Registro</span> <!-- Nombre del formulario. -->
-                        <small class="nota">* Campos obligatorios</small> <!-- Nota de obligatoriedad. -->
-                    </div> <!-- Fin del título del panel. -->
+                <!-- Layout Dividido (70% Formulario / 30% Imagen de Referencia) -->
+                <div class="dashboard-split-add"> <!-- Grilla de 2 columnas principales. -->
+                    
+                    <!-- Columna Izquierda: Formulario de Registro -->
+                    <div class="panel-box"> <!-- Caja de panel para formulario. -->
+                        <div class="panel-title"> <!-- Título del panel. -->
+                            <span>📝 Formulario de Registro</span> <!-- Nombre del formulario. -->
+                            <small class="nota">* Campos obligatorios</small> <!-- Nota de obligatoriedad. -->
+                        </div> <!-- Fin del título del panel. -->
 
-                    <form action="#" method="POST"> <!-- Formulario de envío con método POST. -->
-                        <fieldset> <!-- Agrupador de clasificación del producto. -->
-                            <legend>Clasificación del Producto</legend> <!-- Leyenda del grupo. -->
-                            <div class="form-grid-2col"> <!-- Grilla de 2 columnas. -->
-                                <div class="input-group"> <!-- Grupo de entrada para Nombre. -->
-                                    <label for="add-nombre">Nombre de la Flor / Producto *:</label> <!-- Etiqueta de Nombre. -->
-                                    <input type="text" id="add-nombre" placeholder="Ej: Orquídea Phalaenopsis" required> <!-- Campo de Nombre obligatorio. -->
-                                </div> <!-- Fin de grupo Nombre. -->
-                                <div class="input-group"> <!-- Grupo de entrada para Categoría. -->
-                                    <label for="add-categoria">Categoría *:</label> <!-- Etiqueta de Categoría. -->
-                                    <select id="add-categoria" required> <!-- Desplegable de Categoría. -->
-                                        <option value="">-- Seleccionar Categoría --</option> <!-- Opción predeterminada. -->
-                                        <option value="flores">Flores Individuales</option> <!-- Opción Flores. -->
-                                        <option value="arreglos">Arreglos Florales</option> <!-- Opción Arreglos. -->
-                                        <option value="plantas">Plantas y Macetas</option> <!-- Opción Plantas. -->
-                                    </select> <!-- Fin de desplegable. -->
-                                </div> <!-- Fin de grupo Categoría. -->
-                            </div> <!-- Fin de grilla 2 columnas. -->
-                            <div class="form-grid-2col"> <!-- Grilla de 2 columnas secundaria. -->
-                                <div class="input-group"> <!-- Grupo de entrada para Especie. -->
-                                    <label for="add-especie">Especie / Variedad *:</label> <!-- Etiqueta de Especie. -->
-                                    <input type="text" id="add-especie" placeholder="Ej: Rosa Híbrida de Té" required> <!-- Campo de Especie. -->
-                                </div> <!-- Fin de grupo Especie. -->
-                                <div class="input-group"> <!-- Grupo de entrada para Color. -->
-                                    <label for="add-color">Color Predominante *:</label> <!-- Etiqueta de Color. -->
-                                    <input type="text" id="add-color" placeholder="Ej: Blanca Nieve" required> <!-- Campo de Color. -->
-                                </div> <!-- Fin de grupo Color. -->
-                            </div> <!-- Fin de grilla secundaria. -->
-                        </fieldset> <!-- Fin del grupo de clasificación. -->
+                        <form id="form-registro" action="#" method="POST"> <!-- Formulario de envío con método POST. -->
+                            <fieldset> <!-- Agrupador de clasificación del producto. -->
+                                <legend>Clasificación del Producto</legend> <!-- Leyenda del grupo. -->
+                                <div class="form-grid-2col"> <!-- Grilla Fila 1: SKU y Nombre. -->
+                                    <div class="input-group"> <!-- Grupo SKU. -->
+                                        <label for="add-sku">SKU / Código de Barras *:</label> <!-- Etiqueta SKU. -->
+                                        <input type="text" id="add-sku" placeholder="Ej: FLO-ROSA-001" required> <!-- Campo SKU. -->
+                                    </div> <!-- Fin grupo SKU. -->
+                                    <div class="input-group"> <!-- Grupo Nombre. -->
+                                        <label for="add-nombre">Nombre de la Flor / Producto *:</label> <!-- Etiqueta Nombre. -->
+                                        <input type="text" id="add-nombre" placeholder="Ej: Orquídea Phalaenopsis" required> <!-- Campo Nombre. -->
+                                    </div> <!-- Fin grupo Nombre. -->
+                                </div> <!-- Fin grilla Fila 1. -->
 
-                        <fieldset> <!-- Agrupador de inventario y precios. -->
-                            <legend>Inventario y Precios</legend> <!-- Leyenda del grupo. -->
-                            <div class="form-grid-3col"> <!-- Grilla de 3 columnas. -->
-                                <div class="input-group"> <!-- Grupo de entrada para Stock. -->
-                                    <label for="add-cantidad">Stock Inicial *:</label> <!-- Etiqueta de Stock. -->
-                                    <input type="number" id="add-cantidad" min="1" placeholder="Ej: 10" required> <!-- Campo de Stock numérico. -->
-                                </div> <!-- Fin de grupo Stock. -->
-                                <div class="input-group"> <!-- Grupo de entrada para Precio. -->
-                                    <label for="add-precio">Precio Unitario ($ MXN) *:</label> <!-- Etiqueta de Precio. -->
-                                    <input type="number" id="add-precio" step="0.50" min="0" placeholder="Ej: 120.00" required> <!-- Campo de Precio con decimales. -->
-                                </div> <!-- Fin de grupo Precio. -->
-                                <div class="input-group"> <!-- Grupo de entrada para Tamaño. -->
-                                    <label for="add-tamano">Tamaño / Talle *:</label> <!-- Etiqueta de Tamaño. -->
-                                    <input type="text" id="add-tamano" placeholder="Ej: Mediana (40cm)" required> <!-- Campo de Tamaño. -->
-                                </div> <!-- Fin de grupo Tamaño. -->
-                            </div> <!-- Fin de grilla 3 columnas. -->
-                        </fieldset> <!-- Fin del grupo de inventario. -->
+                                <div class="form-grid-2col"> <!-- Grilla Fila 2: Categoría y Especie. -->
+                                    <div class="input-group"> <!-- Grupo Categoría. -->
+                                        <label for="add-categoria">Categoría *:</label> <!-- Etiqueta Categoría. -->
+                                        <select id="add-categoria" required> <!-- Desplegable Categoría. -->
+                                            <option value="" selected disabled>-- Seleccionar Categoría --</option> <!-- Opción predeterminada. -->
+                                        </select> <!-- Fin desplegable Categoría. -->
+                                    </div> <!-- Fin grupo Categoría. -->
+                                    <div class="input-group"> <!-- Grupo Especie. -->
+                                        <label for="add-especie">Especie / Variedad *:</label> <!-- Etiqueta Especie. -->
+                                        <input type="text" id="add-especie" placeholder="Ej: Rosa Híbrida de Té" required> <!-- Campo Especie. -->
+                                    </div> <!-- Fin grupo Especie. -->
+                                </div> <!-- Fin grilla Fila 2. -->
+
+                                <div class="form-grid-2col"> <!-- Grilla Fila 3: Color y Proveedor. -->
+                                    <div class="input-group"> <!-- Grupo Color. -->
+                                        <label for="add-color">Color Predominante *:</label> <!-- Etiqueta Color. -->
+                                        <input type="text" id="add-color" placeholder="Ej: Blanca Nieve" required> <!-- Campo Color. -->
+                                    </div> <!-- Fin grupo Color. -->
+                                    <div class="input-group"> <!-- Grupo Proveedor. -->
+                                        <label for="add-proveedor">Proveedor:</label> <!-- Etiqueta Proveedor. -->
+                                        <select id="add-proveedor"> <!-- Desplegable Proveedor. -->
+                                            <option value="" selected disabled>-- Seleccionar Proveedor --</option> <!-- Opción por defecto. -->
+                                            <option value="invernadero_central">Invernadero Central</option> <!-- Opción 1. -->
+                                            <option value="importadora_flora">Importadora Flora Internacional</option> <!-- Opción 2. -->
+                                            <option value="distribuidora_local">Distribuidora Local de Botánica</option> <!-- Opción 3. -->
+                                        </select> <!-- Fin desplegable Proveedor. -->
+                                    </div> <!-- Fin grupo Proveedor. -->
+                                </div> <!-- Fin grilla Fila 3. -->
+                            </fieldset> <!-- Fin del grupo de clasificación. -->
+
+                            <fieldset> <!-- Agrupador de inventario y precios. -->
+                                <legend>Inventario y Precios</legend> <!-- Leyenda del grupo. -->
+                                <div class="form-grid-3col"> <!-- Grilla Fila 1 (Finanzas): Costo, Precio y Tamaño. -->
+                                    <div class="input-group"> <!-- Grupo Costo. -->
+                                        <label for="add-costo">Costo de Compra ($ MXN) *:</label> <!-- Etiqueta Costo. -->
+                                        <input type="number" id="add-costo" step="0.50" min="0" placeholder="Ej: 60.00" required> <!-- Campo Costo. -->
+                                    </div> <!-- Fin grupo Costo. -->
+                                    <div class="input-group"> <!-- Grupo Precio. -->
+                                        <label for="add-precio">Precio Unitario ($ MXN) *:</label> <!-- Etiqueta Precio. -->
+                                        <input type="number" id="add-precio" step="0.50" min="0" placeholder="Ej: 120.00" required> <!-- Campo Precio. -->
+                                    </div> <!-- Fin grupo Precio. -->
+                                    <div class="input-group"> <!-- Grupo Tamaño. -->
+                                        <label for="add-tamano">Tamaño / Talle *:</label> <!-- Etiqueta Tamaño. -->
+                                        <input type="text" id="add-tamano" placeholder="Ej: Mediana (40cm)" required> <!-- Campo Tamaño. -->
+                                    </div> <!-- Fin grupo Tamaño. -->
+                                </div> <!-- Fin grilla 3 columnas. -->
+
+                                <div class="form-grid-2col"> <!-- Grilla Fila 2 (Cantidades 50% / 50%): Stock Inicial y Stock Mínimo. -->
+                                    <div class="input-group"> <!-- Grupo Stock Inicial. -->
+                                        <label for="add-cantidad">Stock Inicial *:</label> <!-- Etiqueta Stock Inicial. -->
+                                        <input type="number" id="add-cantidad" min="0" placeholder="Ej: 10" required> <!-- Campo Stock Inicial. -->
+                                    </div> <!-- Fin grupo Stock Inicial. -->
+                                    <div class="input-group"> <!-- Grupo Stock Mínimo. -->
+                                        <label for="add-stock-minimo">Stock Mínimo / Alerta *:</label> <!-- Etiqueta Stock Mínimo. -->
+                                        <input type="number" id="add-stock-minimo" min="0" placeholder="Ej: 5" required> <!-- Campo Stock Mínimo. -->
+                                    </div> <!-- Fin grupo Stock Mínimo. -->
+                                </div> <!-- Fin grilla 2 columnas. -->
+                            </fieldset> <!-- Fin del grupo de inventario. -->
+
 
                         <div class="form-actions"> <!-- Contenedor de botones de acción. -->
                             <button type="submit" class="btn-primario" style="flex: 2;">➕ Registrar en Inventario</button> <!-- Botón de envío. -->
                             <button type="reset" class="btn-secundario" style="flex: 1;">Limpiar Formulario</button> <!-- Botón de limpieza. -->
                         </div> <!-- Fin de acciones. -->
                     </form> <!-- Fin del formulario. -->
-                </div> <!-- Fin de caja de panel. -->
+                </div> <!-- Fin de caja de panel formulario. -->
+
+                <!-- Columna Derecha: Tarjetas de Imagen y Observaciones (Alineadas al 100%) -->
+                <div class="panel-columna-derecha"> <!-- Columna derecha flex vertical auto-expansiva. -->
+                    
+                    <!-- Tarjeta 1: Carga de Imagen de Referencia -->
+                    <div class="panel-box panel-imagen-referencia"> <!-- Panel derecho de carga de imagen. -->
+                        <div class="panel-title"> <!-- Título del panel de imagen. -->
+                            <span>📷 Imagen de Referencia</span> <!-- Nombre del módulo. -->
+                            <small class="nota">Formato recomendado 1:1</small> <!-- Nota. -->
+                        </div> <!-- Fin de título del panel. -->
+
+                        <!-- Contenedor Drag & Drop de Alta -->
+                        <div class="dropzone-large" id="add-dropzone"> <!-- Zona interactiva Drag & Drop. -->
+                            <input type="file" id="add-foto" name="add_foto" accept="image/*" class="dropzone-input"> <!-- File input transparente. -->
+
+                            <!-- Estado Vacío (Placeholder) -->
+                            <div class="dropzone-placeholder" id="dropzone-placeholder"> <!-- Placeholder visual. -->
+                                <div class="dropzone-icon-circle"> <!-- Círculo con ícono. -->
+                                    <span>📸</span> <!-- Ícono de cámara. -->
+                                </div> <!-- Fin círculo. -->
+                                <p class="dropzone-instruction">
+                                    Arrastra la imagen del producto aquí o <strong>haz clic para buscar</strong>
+                                </p> <!-- Texto de instrucción. -->
+                                <span class="dropzone-subtext">Soporta JPG, PNG, WEBP (Máx. 5MB)</span> <!-- Subtexto informativo. -->
+                            </div> <!-- Fin placeholder. -->
+
+                            <!-- Estado Previsualización de Imagen -->
+                            <div class="dropzone-preview hidden" id="dropzone-preview"> <!-- Previsualización con overlay. -->
+                                <img id="add-img-preview" src="" alt="Previsualización de producto"> <!-- Imagen cargada. -->
+                                <button type="button" class="btn-remove-img" id="btn-remove-img" title="Quitar imagen">✕</button> <!-- Botón flotante eliminar. -->
+                                <div class="preview-overlay"> <!-- Overlay informativo al hacer hover. -->
+                                    <span>Haz clic o arrastra para cambiar la imagen</span> <!-- Leyenda. -->
+                                </div> <!-- Fin overlay. -->
+                            </div> <!-- Fin previsualización. -->
+                        </div> <!-- Fin contenedor Dropzone. -->
+                    </div> <!-- Fin de panel 1 derecho. -->
+
+                    <!-- Tarjeta 2: Observaciones Iniciales (Expandible para emparejar fondo) -->
+                    <div class="panel-box panel-box-flex"> <!-- Panel derecho de observaciones expansivo. -->
+                        <div class="panel-title"> <!-- Título del panel de observaciones. -->
+                            <span>📝 Observaciones Iniciales</span> <!-- Nombre del módulo. -->
+                            <small class="nota">Uso interno</small> <!-- Nota. -->
+                        </div> <!-- Fin de título del panel. -->
+                        <div class="input-group input-group-flex span-full"> <!-- Grupo del textarea expansivo. -->
+                            <label for="add-notas">Notas o Cuidados:</label> <!-- Etiqueta Notas. -->
+                            <textarea id="add-notas" name="add_notas" placeholder="Notas internas sobre la llegada o estado de este producto..."></textarea> <!-- Textarea flexible. -->
+                        </div> <!-- Fin grupo del textarea. -->
+                    </div> <!-- Fin de panel 2 derecho. -->
+
+                </div> <!-- Fin de columna derecha flex. -->
+
+                </div> <!-- Fin del layout dividido. -->
 
             </div> <!-- Fin de contenido. -->
         </main> <!-- Fin de área principal. -->
@@ -115,6 +197,89 @@
     <footer> <!-- Pie de página global. -->
         <p>&copy; 2026 Florería. Todos los derechos reservados.</p> <!-- Mensaje de derechos de autor. -->
     </footer> <!-- Fin del pie de página. -->
+
+    <!-- Script de Interactividad Drag & Drop y Previsualización de Imagen -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const dropzone = document.getElementById('add-dropzone');
+            const fileInput = document.getElementById('add-foto');
+            const placeholder = document.getElementById('dropzone-placeholder');
+            const previewContainer = document.getElementById('dropzone-preview');
+            const previewImg = document.getElementById('add-img-preview');
+            const btnRemove = document.getElementById('btn-remove-img');
+            const formRegistro = document.getElementById('form-registro');
+
+            // Mostrar la previsualización de la imagen
+            function showPreview(file) {
+                if (file && file.type.startsWith('image/')) {
+                    const reader = new FileReader();
+                    reader.onload = (e) => {
+                        previewImg.src = e.target.result;
+                        placeholder.classList.add('hidden');
+                        previewContainer.classList.remove('hidden');
+                    };
+                    reader.readAsDataURL(file);
+                }
+            }
+
+            // Quitar la previsualización y restaurar estado inicial
+            function clearPreview() {
+                fileInput.value = '';
+                previewImg.src = '';
+                previewContainer.classList.add('hidden');
+                placeholder.classList.remove('hidden');
+            }
+
+            if (dropzone && fileInput) {
+                // Efecto hover durante el arrastre
+                ['dragenter', 'dragover'].forEach(eventName => {
+                    dropzone.addEventListener(eventName, (e) => {
+                        e.preventDefault();
+                        dropzone.classList.add('drag-over');
+                    });
+                });
+
+                ['dragleave', 'drop'].forEach(eventName => {
+                    dropzone.addEventListener(eventName, (e) => {
+                        e.preventDefault();
+                        dropzone.classList.remove('drag-over');
+                    });
+                });
+
+                // Soltar archivo
+                dropzone.addEventListener('drop', (e) => {
+                    const files = e.dataTransfer.files;
+                    if (files.length) {
+                        fileInput.files = files;
+                        showPreview(files[0]);
+                    }
+                });
+
+                // Seleccionar archivo manualmente
+                fileInput.addEventListener('change', () => {
+                    if (fileInput.files.length) {
+                        showPreview(fileInput.files[0]);
+                    }
+                });
+
+                // Botón flotante para quitar la imagen
+                if (btnRemove) {
+                    btnRemove.addEventListener('click', (e) => {
+                        e.stopPropagation();
+                        e.preventDefault();
+                        clearPreview();
+                    });
+                }
+            }
+
+            // Restaurar la zona al limpiar el formulario
+            if (formRegistro) {
+                formRegistro.addEventListener('reset', () => {
+                    clearPreview();
+                });
+            }
+        });
+    </script>
 
 </body> <!-- Fin del cuerpo del documento. -->
 
