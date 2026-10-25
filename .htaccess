@@ -1,0 +1,31 @@
+# ==============================================================================
+# .htaccess — Floreria Security Hardening
+# ==============================================================================
+Options -Indexes
+ServerSignature Off
+
+<FilesMatch "(^\.env|\.(json|log|sql|md|git|yml|yaml|ini|lock|phar|bak|swp|sh))$">
+    <IfModule mod_authz_core.c>
+        Require all denied
+    </IfModule>
+    <IfModule !mod_authz_core.c>
+        Order Allow,Deny
+        Deny from all
+    </IfModule>
+</FilesMatch>
+
+<IfModule mod_headers.c>
+    Header always unset X-Powered-By
+    Header unset X-Powered-By
+    Header always set X-Content-Type-Options "nosniff"
+    Header always set X-Frame-Options "SAMEORIGIN"
+    Header always set X-XSS-Protection "1; mode=block"
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+    Header always set Permissions-Policy "geolocation=(), microphone=(), camera=()"
+    Header always set Cross-Origin-Opener-Policy "same-origin-allow-popups"
+    Header always set Cross-Origin-Resource-Policy "same-origin"
+
+    <If "%{HTTPS} == 'on' || %{HTTP:X-Forwarded-Proto} == 'https'">
+        Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+    </If>
+</IfModule>
